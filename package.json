@@ -1,0 +1,24 @@
+{
+  "name": "kayano-san",
+  "version": "0.1.0",
+  "description": "The only Discord bot you'll need",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "registerCommands": "node ./src/deploy-commands"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "discord-js"
+  ],
+  "author": "Pukima",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  }
+}
