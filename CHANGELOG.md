@@ -10,10 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.vsls.json` to `.gitignore` because I don't care what you share with your Live Share session
 - Some minor opotical changes (new line at the end of a file etc.)
 - `-dev` at the end of the version (will be removed on the final commit of a release)
+- Sponsor button on Github
 ### Changed
 - Forgot to bump the version number
 ### Removed
 - A `console.log` that was just for testing something (in `raw.js`)
+### Fixed
+- typos
 
 ## [0.0.2] - 2021-10-11
 ### Added
