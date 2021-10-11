@@ -7,7 +7,7 @@ module.exports = {
         .setName('meme')
         .setDescription('Send a random meme from r/meme'),
     async execute(interaction) {
-        let data = await fetch(`http://meme-api.herokuapp.com/gimme`).then(res => res.json())
+        let data = await fetch(`http://meme-api.herokuapp.com/gimme`).then(res => res.json());
 
         const embed = new MessageEmbed()
             embed.setAuthor(data.author, 'https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png', 'https://reddit.com/u/' + data.author)
@@ -16,6 +16,6 @@ module.exports = {
             embed.setImage(data.url)
             embed.setFooter(`r/${data.subreddit} • ${data.ups} 👍`)
 
-        interaction.reply({ embeds: [embed] })
+        interaction.reply({ embeds: [embed] });
     }
-}
+};

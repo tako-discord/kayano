@@ -11,9 +11,8 @@ module.exports = {
         let channel = interaction.options.getChannel('channel');
         let messageID = interaction.options.getString('message_id');
 
-        let fetchedMessage = await channel.messages.fetch(messageID)
-        console.log(fetchedMessage)
+        let fetchedMessage = await channel.messages.fetch(messageID);
         
-        interaction.reply({ content: `\`\`\`${fetchedMessage.content}\`\`\``, ephemeral: true })
+        interaction.reply({ content: `\`\`\`${fetchedMessage.content}\`\`\``, ephemeral: true });
     }
-}
+};

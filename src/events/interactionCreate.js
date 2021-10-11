@@ -35,4 +35,4 @@ module.exports = {
             client.channels.cache.get(process.env.ERROR_CHANNEL).send({ embeds: [embed]});
         }
     }
-}
+};

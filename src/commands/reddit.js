@@ -12,7 +12,7 @@ module.exports = {
         let data = await fetch(`http://meme-api.herokuapp.com/gimme/` + subreddit).then(res => res.json());
 
         if (data.message == `r/${subreddit.toLowerCase()} has no Posts with Images`) {
-            return interaction.reply({ content: data.message, ephemeral: true })
+            return interaction.reply({ content: data.message, ephemeral: true });
         }
 
         embed = new MessageEmbed()
@@ -24,6 +24,6 @@ module.exports = {
             embed.setFooter(`r/${data.subreddit} • ${data.ups} Upvotes`)
             embed.setTimestamp()
 
-        interaction.reply({ embeds: [embed] })
+        interaction.reply({ embeds: [embed] });
     }
-}
+};
