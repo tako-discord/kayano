@@ -1,6 +1,6 @@
 {
   "name": "kayano-san",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The only Discord bot you'll need",
   "main": "src/index.js",
   "scripts": {

@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `.vsls.json` to `.gitignore` because I don't care what you share with your Live Share session
 - Some minor opotical changes (new line at the end of a file etc.)
+### Changed
+- Forgot to bump the version number
 ### Removed
 - A `console.log` that was just for testing something (in `raw.js`)
 
