@@ -1,4 +1,5 @@
 const client = require('../index');
+const { version } = require('../../package.json');
 
 module.exports = {
     name: 'ready',
@@ -7,22 +8,17 @@ module.exports = {
         console.log([
             ``,
             `Starting...`,
-            `${client.user.tag} (${client.user.id}) has started`
+            `${client.user.tag} (${client.user.id}) has started`,
+            ``
         ].join(`\n----------\n`));
 
         const activities = [
-            `over ${client.guilds.cache.size} servers!`,
-			`Assasination Classroom`,
-            `with you`
+            `with version ${version}`,
+            `on ${client.guilds.cache.size} servers`,
+            `red light, green light`
 		];
 
-        const activityTypes = [
-            'PLAYING',
-            'WATCHING',
-            'WATCHING'
-        ]
-
 		let i = 0;
-		setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: `${activityTypes[i++ % activityTypes.length]}` }), 12000);
+		setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'PLAYING' }), 7500);
     }
 };

@@ -7,7 +7,7 @@ module.exports = {
         .setDescription('ECHO...ECHo...ECho...Echo...echo')
         .addStringOption(option => option.setName('message').setDescription('The message the bot should send.').setRequired(true)),
     async execute(interaction) {
-        let msg = interaction.options.getString('message')
+        let msg = interaction.options.getString('message');
 
         embed = new MessageEmbed()
             .setAuthor(interaction.user.tag, interaction.user.avatarURL({ dynamic: true }))
