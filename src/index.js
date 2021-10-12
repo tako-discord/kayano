@@ -1,15 +1,15 @@
-const { Client, Collection, Intents } = require("discord.js");
-const fs = require("fs");
-require("dotenv").config();
+const { Client, Collection, Intents } = require('discord.js');
+const fs = require('fs');
+require('dotenv').config();
 
-const client = new Client({intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS
+const client = new Client({ intents: [
+	Intents.FLAGS.GUILDS,
+	Intents.FLAGS.GUILD_MESSAGES,
+	Intents.FLAGS.GUILD_MEMBERS,
 ], allowedMentions: {
-	parse: ["users", "roles"],
-	repliedUser: false
-}});
+	parse: ['users', 'roles'],
+	repliedUser: false,
+} });
 module.exports = client;
 
 // Events
@@ -19,7 +19,8 @@ for (const file of eventFiles) {
 	const event = require(__dirname + `/events/${file}`);
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
-	} else {
+	}
+	else {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
