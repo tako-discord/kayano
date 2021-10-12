@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.vsls.json` as it should be ignored
 ### Fixed
 - Wrong link in CHANGELOG for `1.0.0-alpha`
+- `clear` command saying it deleted 0 messages when it deleted 1 message (I don't know why it just happens on author though)
 
 ## [1.0.0-alpha] - 2021-10-12
 ### Added
@@ -51,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 Inital commit
 
+[Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
 [1.0.0]: https://github.com/kayano-bot/kayano/compare/v0.0.2...v1.0.0-alpha
 [0.0.2]: https://github.com/kayano-bot/kayano/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/kayano-bot/kayano/commits/v0.0.1

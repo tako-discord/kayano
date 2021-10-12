@@ -25,18 +25,34 @@ module.exports = {
 				});
 
 				await channel.bulkDelete(filtered, true).then(messages => {
-					interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from ${target}!` });
-					setTimeout(function() {
-						interaction.deleteReply();
-					}, 5000);
+					if (messages.size == 0) {
+						interaction.reply({ content: `🧹 Cleared 1 message from ${target}!` });
+						setTimeout(function() {
+							interaction.deleteReply();
+						}, 5000);
+					}
+					else {
+						interaction.reply({ content: `🧹 Cleared ${messages.size} messages from ${target}!` });
+						setTimeout(function() {
+							interaction.deleteReply();
+						}, 5000);
+					}
 				});
 			}
 			else {
 				await channel.bulkDelete(amount, true).then(messages => {
-					interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from this channel!` });
-					setTimeout(function() {
-						interaction.deleteReply();
-					}, 5000);
+					if (messages.size == 0) {
+						interaction.reply({ content: '🧹 Cleared 1 message from this channel!' });
+						return setTimeout(function() {
+							interaction.deleteReply();
+						}, 5000);
+					}
+					else {
+						interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from this channel!` });
+						setTimeout(function() {
+							interaction.deleteReply();
+						}, 5000);
+					}
 				});
 			}
 		}
