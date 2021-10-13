@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 ### Added
 - New config system (WIP)
+### Changed
+- README now is a little more clear
 
 ### [1.1.1-alpha] - 2021-10-13
 ### Removed
