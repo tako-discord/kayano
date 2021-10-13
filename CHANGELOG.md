@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0-alpha] - 2021-10-13
+### Added
+- Eslint
+- Dependabot
+- Clear command
+- Donation "Badge" in the `userinfo` command for users who donated
+- More info added to `userinfo`
+- `customEmojis.js` so that you can replace them with your own emojis (when using custom ones the bot must be in the server where the emojis are from)
+### Removed
+- `.vsls.json` as it should be ignored
+### Fixed
+- Wrong link in CHANGELOG for `1.0.0-alpha`
+- `clear` command saying it deleted 0 messages when it deleted 1 message (I don't know why it just happens on author though)
+
 ## [1.0.0-alpha] - 2021-10-12
 ### Added
 - `.vsls.json` to `.gitignore` because I don't care what you share with your Live Share session
@@ -42,6 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 Inital commit
 
-[0.0.3]: https://github.com/kayano-bot/kayano/compare/v0.0.2...v1.0.0-alpha
+[Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
+[1.1.0]: https://github.com/kayano-bot/kayano/compare/v1.0.0-alpha...v1.1.0-alpha
+[1.0.0]: https://github.com/kayano-bot/kayano/compare/v0.0.2...v1.0.0-alpha
 [0.0.2]: https://github.com/kayano-bot/kayano/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/kayano-bot/kayano/commits/v0.0.1

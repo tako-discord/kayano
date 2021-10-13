@@ -1,11 +1,12 @@
 {
   "name": "kayano-san",
-  "version": "1.0.0-alpha",
+  "version": "1.1.0-alpha",
   "description": "The only Discord bot you'll need",
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
-    "registerCommands": "node ./src/deploy-commands"
+    "registerCommands": "node ./src/deploy-commands",
+    "lint": "eslint ."
   },
   "keywords": [
     "bot",
@@ -21,5 +22,8 @@
     "discord.js": "^13.2.0",
     "dotenv": "^10.0.0",
     "node-fetch": "^2.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
   }
 }

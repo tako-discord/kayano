@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "[dependabot]"
+      include: "scope"
+    labels:
+      - "dependencies"
+    reviewers:
+      - "Pukimaa"
+    target-branch: "development"
+    versioning-strategy: auto
