@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Eslint
 - Clear command
+- Donation "Badge" in the `userinfo` command for users who donated
+- More info added to `userinfo`
+- `customEmojis.js` so that you can replace them with your own emojis (when using custom ones the bot must be in the server where the emojis are from)
 ### Removed
 - `.vsls.json` as it should be ignored
 ### Fixed
