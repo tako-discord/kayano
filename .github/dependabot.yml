@@ -11,5 +11,8 @@ updates:
       - "dependencies"
     reviewers:
       - "Pukimaa"
+    ignore:
+      - dependency-name: "node-fetch"
+        versions: ["version-update:semver-major"]
     target-branch: "development"
     versioning-strategy: auto
