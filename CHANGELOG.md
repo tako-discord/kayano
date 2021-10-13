@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Eslint
+- Dependabot
 - Clear command
 - Donation "Badge" in the `userinfo` command for users who donated
 - More info added to `userinfo`
