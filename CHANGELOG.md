@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 ### Added
 - New config system (WIP)
+- Content for the `info` command
 ### Changed
 - README now is a little more clear
+- Redesigned the `userinfo` command
 
 ### [1.1.1-alpha] - 2021-10-13
 ### Removed
