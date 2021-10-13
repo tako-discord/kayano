@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [Unreleased]
+### [1.1.1-alpha] - 2021-10-13
 ### Removed
-- Dependabot `node-fetch` updates above `2.y.z` got removed because of the transition from `node-fetch` to ESM only
+- Dependabot updates `node-fetch` to v3 (because that would break the bot and v2 still gets updates)
+### Fixed
+- Wrong links in the CHANGELOG
 
 ## [1.1.0-alpha] - 2021-10-13
 ### Added
@@ -61,7 +63,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
-[1.1.0]: https://github.com/kayano-bot/kayano/compare/v1.0.0-alpha...v1.1.0-alpha
-[1.0.0]: https://github.com/kayano-bot/kayano/compare/v0.0.2...v1.0.0-alpha
+[1.1.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.0-alpha...v1.1.1-alpha
+[1.1.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.0.0-alpha...v1.1.0-alpha
+[1.0.0-alpha]: https://github.com/kayano-bot/kayano/compare/v0.0.2...v1.0.0-alpha
 [0.0.2]: https://github.com/kayano-bot/kayano/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/kayano-bot/kayano/commits/v0.0.1
