@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const { developerEmoji, senseiEmoji, donatorEmoji } = require('../customEmojis');
+const { developerEmoji, senseiEmoji, donatorEmoji } = require('../../config');
 const donators = require('../donators');
 require('dotenv').config();
 
