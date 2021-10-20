@@ -1,16 +1,25 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [Unreleased]
+## [1.2.0](https://github.com/Pukimaa/kayano/compare/v1.0.0-alpha...v1.2.0) (2021-10-20)
+
+### [1.2.0-alpha] - 2021-10-20
 ### Added
-- New config system (WIP)
+- New config system (sensible data is still in `.env` like the token or the ID of the Owner)
 - Content for the `info` command
+- `uwufy` command
 ### Changed
 - README now is a little more clear
 - Redesigned the `userinfo` command
+- Bumped various dependencies ([#6](https://github.com/kayano-bot/kayano/pull/6), [#5](https://github.com/kayano-bot/kayano/pull/5), [#4](https://github.com/kayano-bot/kayano/pull/4))
+- Switching from `npm` to `yarn`
+- More consitency for the `reddit` and `meme` command
+- `raw` moved to the Context Menu (right click on a message)
+### Removed
+- Scope for dependabot commits got removed
+- Temporarly removed the `info` command due a bug (discord(.js) being weird with registering commands)
+- Guild only registering is now gone
 
 ### [1.1.1-alpha] - 2021-10-13
 ### Removed
