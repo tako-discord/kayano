@@ -1,18 +1,12 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { ContextMenuCommandBuilder, codeBlock } = require('@discordjs/builders');
 
 module.exports = {
-	data: new SlashCommandBuilder()
-		.setName('raw')
-		.setDescription('Get the raw message content from a given message')
-		.addChannelOption(option => option.setName('channel').setDescription('The channel the message is in (Don\'t use a category)').setRequired(true))
-		.addStringOption(option => option.setName('message_id').setDescription('The ID of the message').setRequired(true)),
-
+	data: new ContextMenuCommandBuilder()
+		.setName('Get Raw Message')
+		.setType(3),
 	async execute(interaction) {
-		const channel = interaction.options.getChannel('channel');
-		const messageID = interaction.options.getString('message_id');
+		const message = interaction.options.getMessage('message');
 
-		const fetchedMessage = await channel.messages.fetch(messageID);
-
-		interaction.reply({ content: `\`\`\`${fetchedMessage.content}\`\`\``, ephemeral: true });
+		interaction.reply({ content: codeBlock(message.content), ephemeral: true });
 	},
 };

@@ -15,6 +15,7 @@ module.exports = {
 		embed.setURL(data.postLink);
 		embed.setImage(data.url);
 		embed.setFooter(`r/${data.subreddit} • ${data.ups} 👍`);
+		embed.setTimestamp();
 
 		interaction.reply({ embeds: [embed] });
 	},
