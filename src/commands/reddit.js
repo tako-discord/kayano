@@ -6,7 +6,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('reddit')
 		.setDescription('Send a random picture from a given subreddit')
-		.addStringOption(option => option.setName('subreddit').setDescription('The subreddit you want the image from').setRequired(true)),
+		.addStringOption(option => option.setName('subreddit').setDescription('The subreddit you want the image from (example: aww)').setRequired(true)),
 	async execute(interaction) {
 		const subreddit = interaction.options.getString('subreddit');
 		const data = await fetch('http://meme-api.herokuapp.com/gimme/' + subreddit).then(res => res.json());
@@ -21,7 +21,7 @@ module.exports = {
 		embed.setTitle(data.title);
 		embed.setURL(data.postLink);
 		embed.setImage(data.url);
-		embed.setFooter(`r/${data.subreddit} • ${data.ups} Upvotes`);
+		embed.setFooter(`r/${data.subreddit} • ${data.ups} 👍`);
 		embed.setTimestamp();
 
 		interaction.reply({ embeds: [embed] });

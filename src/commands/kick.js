@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { Permissions } = require('discord.js');
+const { noPermissionText } = require('../../config');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -9,7 +10,7 @@ module.exports = {
 		.addStringOption(option => option.setName('reason').setDescription('The reason you kick the member')),
 	async execute(interaction) {
 		if (!interaction.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) {
-			return interaction.reply({ content: 'You don\'t have the permission to run this command!', ephemeral: true });
+			return interaction.reply({ content: noPermissionText, ephemeral: true });
 		}
 		else {
 			const target = interaction.options.getMember('target');

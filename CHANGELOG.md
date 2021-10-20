@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### [1.2.0-alpha] - 2021-10-20
+### Added
+- New config system (sensible data is still in `.env` like the token or the ID of the Owner)
+- Content for the `info` command
+- `uwufy` command
+### Changed
+- README now is a little more clear
+- Redesigned the `userinfo` command
+- Bumped various dependencies ([#6](https://github.com/kayano-bot/kayano/pull/6), [#5](https://github.com/kayano-bot/kayano/pull/5), [#4](https://github.com/kayano-bot/kayano/pull/4))
+- Switching from `npm` to `yarn`
+- More consitency for the `reddit` and `meme` command
+- `raw` moved to the Context Menu (right click on a message)
+### Removed
+- Scope for dependabot commits got removed
+- Temporarly removed the `info` command due a bug (discord(.js) being weird with registering commands)
+- Guild only registering is now gone
+
 ### [1.1.1-alpha] - 2021-10-13
 ### Removed
 - Dependabot updates `node-fetch` to v3 (because that would break the bot and v2 still gets updates)
@@ -63,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
+[1.2.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.1-alpha...v1.2.0-alpha
 [1.1.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.0-alpha...v1.1.1-alpha
 [1.1.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.0.0-alpha...v1.1.0-alpha
 [1.0.0-alpha]: https://github.com/kayano-bot/kayano/compare/v0.0.2...v1.0.0-alpha

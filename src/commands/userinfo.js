@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const { developerEmoji, senseiEmoji, donatorEmoji } = require('../customEmojis');
+const { developerEmoji, senseiEmoji, donatorEmoji } = require('../../config');
 const donators = require('../donators');
 require('dotenv').config();
 
@@ -32,16 +32,15 @@ module.exports = {
 			const userFlags = user.flags.toArray();
 
 			const embed = new MessageEmbed()
-				.setTitle(`Infos for ${user.username}:`)
-				.setThumbnail(user.avatarURL({ dynamic: true }))
-				.setDescription([
-					'**__User:__**',
-					`**Username**: ${user.tag}`,
-					`**ID**: ${user.id}`,
-					`**Created at**: ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
-					`**Flags**: ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+				.setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+				.setColor('YELLOW')
+				.addField('User', [
+					`**❯ User:** ${user.tag} (${user.id})`,
+					`**❯ ID:** ${user.id}`,
+					`**❯ Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+					`**❯ Time Created:** ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
+					'\u200b',
 				].join('\n'));
-
 			if (user.id == process.env.OWNER_ID) {
 				embed.setTitle(`Infos for ${user.username}:`);
 				embed.addField(`**${developerEmoji} Developer**`, `${user.username} is my Original Creator & Developer`);
@@ -60,16 +59,15 @@ module.exports = {
 			const userFlags = user.flags.toArray();
 
 			const embed = new MessageEmbed()
-				.setTitle(`Infos for ${user.username}:`)
-				.setThumbnail(user.avatarURL({ dynamic: true }))
-				.setDescription([
-					'**__User:__**',
-					`**Username**: ${user.tag}`,
-					`**ID**: ${user.id}`,
-					`**Created at**: ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
-					`**Flags**: ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+				.setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+				.setColor('YELLOW')
+				.addField('User', [
+					`**❯ User:** ${user.tag} (${user.id})`,
+					`**❯ ID:** ${user.id}`,
+					`**❯ Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+					`**❯ Time Created:** ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
+					'\u200b',
 				].join('\n'));
-
 			if (user.id == process.env.OWNER_ID) {
 				embed.setTitle(`Infos for ${user.username}:`);
 				embed.addField(`**${developerEmoji} Developer**`, `${user.username} is my Original Creator & Developer`);

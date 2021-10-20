@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { Permissions } = require('discord.js');
+const { noPermissionText } = require('../../config');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -57,7 +58,7 @@ module.exports = {
 			}
 		}
 		else {
-			return interaction.reply({ content: 'You don\'t have the permission to use that command!', ephemeral: true });
+			return interaction.reply({ content: noPermissionText, ephemeral: true });
 		}
 	},
 };
