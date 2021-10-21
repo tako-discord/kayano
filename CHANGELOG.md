@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [1.2.0-alpha] - 2021-10-20
+## [1.2.1-alpha] - 2021-10-21
+### Added
+- Badges in the Readme
+- RPC script (`yarn run rpc` (or `npm run rpc` if you use npm rather than yarn))
+    - When you run it on the same machine where the Discord app runs (just the client and not the web!) you get a little "game" showing app which is an ad for Kayano (Invite link + Github link)
+### Fixed
+- Wrong heading types in the CHANGELOG
+
+## [1.2.0-alpha] - 2021-10-20
 ### Added
 - New config system (sensible data is still in `.env` like the token or the ID of the Owner)
 - Content for the `info` command
@@ -21,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Temporarly removed the `info` command due a bug (discord(.js) being weird with registering commands)
 - Guild only registering is now gone
 
-### [1.1.1-alpha] - 2021-10-13
+## [1.1.1-alpha] - 2021-10-13
 ### Removed
 - Dependabot updates `node-fetch` to v3 (because that would break the bot and v2 still gets updates)
 ### Fixed
@@ -80,6 +88,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
+[1.2.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.2.0-alpha...v1.2.1-alpha
 [1.2.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.1-alpha...v1.2.0-alpha
 [1.1.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.0-alpha...v1.1.1-alpha
 [1.1.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.0.0-alpha...v1.1.0-alpha
