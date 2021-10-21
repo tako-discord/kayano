@@ -1,12 +1,13 @@
 {
   "name": "kayano-san",
-  "version": "1.2.0-alpha",
+  "version": "1.2.1-alpha",
   "description": "The only Discord bot you'll need",
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
     "registerCommands": "node ./src/deploy-commands",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "rpc": "node ./rpc_ad/index.js"
   },
   "keywords": [
     "bot",
@@ -19,6 +20,7 @@
     "@discordjs/builders": "^0.7.0",
     "@discordjs/rest": "^0.1.1-canary.0",
     "discord-api-types": "^0.24.0",
+    "discord-rpc": "^4.0.1",
     "discord.js": "^13.2.0",
     "dotenv": "^10.0.0",
     "ms": "^2.1.3",
