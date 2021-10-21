@@ -16,9 +16,6 @@ Steps to reproduce the behavior:
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-
-
 **System specs:**
  - OS: [e.g. Ubuntu 21.04]
  - Node Version [e.g. v16.9.1]
