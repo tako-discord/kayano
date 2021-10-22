@@ -17,5 +17,6 @@ In a terminal run the following commands:
 6. Now you can choose to either
     - Start the bot
     - Start the RPC (your activity) ad
+    - Register commands (so that you can actually use the commands)
     - Update the Bot to it's latest version
     - Quit (you can also achieve the same by pressing `ctrl+c`)

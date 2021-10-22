@@ -23,7 +23,7 @@ inquirer
 			type: 'list',
 			name: 'whatToDo',
 			message: 'What do you want to do? (use your arrow keys)',
-			choices: ['Start the bot', 'Start the RPC ad', 'Update (using ' + 'git'.bgGray + ')', 'Quit'],
+			choices: ['Start the bot', 'Start the RPC ad', 'Register Commands', 'Update (using ' + 'git'.bgGray + ')', 'Quit'],
 		},
 	])
 	.then(answer => {
@@ -37,6 +37,10 @@ inquirer
 			console.info('Attempt to run the file...');
 
 			require('./rpc_ad/index');
+		}
+
+		if (answer.whatToDo == 'Register Commands') {
+			require('./src/deploy-commands');
 		}
 
 		if (answer.whatToDo == 'Update (using ' + 'git'.bgGray + ')') {
