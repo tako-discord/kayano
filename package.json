@@ -22,7 +22,7 @@
     "colors": "^1.4.0",
     "discord-api-types": "^0.24.0",
     "discord-rpc": "^4.0.1",
-    "discord.js": "^13.2.0",
+    "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
     "inquirer": "^8.2.0",
     "ms": "^2.1.3",
