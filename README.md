@@ -17,7 +17,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://pukima.site"><img src="https://avatars.githubusercontent.com/u/58347116?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pukima</b></sub></a><br /><a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Code">💻</a> <a href="#maintenance-Pukimaa" title="Maintenance">🚧</a> <a href="https://github.com/kayano-bot/kayano/pulls?q=is%3Apr+reviewed-by%3APukimaa" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://pukima.site"><img src="https://avatars.githubusercontent.com/u/58347116?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pukima</b></sub></a><br /><a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Code">💻</a> <a href="#maintenance-Pukimaa" title="Maintenance">🚧</a> <a href="https://github.com/kayano-bot/kayano/pulls?q=is%3Apr+reviewed-by%3APukimaa" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Tests">⚠️</a> <a href="#ideas-Pukimaa" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
