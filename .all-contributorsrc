@@ -1,0 +1,30 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=for-the-badge)](#contributors)",
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Pukimaa",
+      "name": "Pukima",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58347116?v=4",
+      "profile": "https://pukima.site",
+      "contributions": [
+        "code",
+        "maintenance",
+        "review",
+        "test",
+        "ideas",
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "kayano",
+  "projectOwner": "kayano-bot",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
