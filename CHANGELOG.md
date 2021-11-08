@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Added
+- `kayano.js` (helper) (if you run it with node you can start the bot, start the rpc or update much more easily)
+- Add basic installation guide in the README
+
 ## [1.2.1-alpha] - 2021-10-21
 ### Added
 - Badges in the Readme
