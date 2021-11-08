@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- Bump @discordjs/builders from 0.7.0 to 0.8.2 (#12)
+- Bump node-fetch from 2.6.5 to 2.6.6 (#13)
+- Bump discord.js from 13.2.0 to 13.3.1 (#14)
+- Bump eslint from 8.1.0 to 8.2.0 (#17)
+
 ## [1.3.0-alpha] - 2021-11-08
 ### Added
 - `kayano.js` (helper) (if you run it with node you can start the bot, start the rpc or update much more easily)
@@ -94,6 +101,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
+[1.3.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.2.1-alpha...v1.3.0-alpha
 [1.2.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.2.0-alpha...v1.2.1-alpha
 [1.2.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.1-alpha...v1.2.0-alpha
 [1.1.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.0-alpha...v1.1.1-alpha
