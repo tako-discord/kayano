@@ -28,13 +28,13 @@ inquirer
 	])
 	.then(answer => {
 		if (answer.whatToDo == 'Start the bot') {
-			console.info('Attempt to run the file...');
+			console.info('Attempt to start the bot...');
 
 			require('./src/index');
 		}
 
 		if (answer.whatToDo == 'Start the RPC ad') {
-			console.info('Attempt to run the file...');
+			console.info('Attempt to start the RPC...');
 
 			require('./rpc_ad/index');
 		}

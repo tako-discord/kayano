@@ -7,7 +7,7 @@
     "start": "node .",
     "registerCommands": "node ./src/deploy-commands",
     "lint": "eslint .",
-    "rpc": "node ./rpc_ad/index.js"
+    "helper": "node ./helper.js"
   },
   "keywords": [
     "bot",

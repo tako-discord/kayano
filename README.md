@@ -13,7 +13,7 @@ In a terminal run the following commands:
 3. Outside (or inside) the terminal edit the `.env.example` file and rename it to `.env`
 - In the terminal again (also same folder as before) run:
 4. `yarn` (if not installed install [node](https://nodejs.org) and then run `npm i -g yarn`)
-5. In the terminal again (also same folder as before) run: `node kayano.js`
+5. In the terminal again (also same folder as before) run: `yarn run helper`
 6. Now you can choose to either
     - Start the bot
     - Start the RPC (your activity) ad
