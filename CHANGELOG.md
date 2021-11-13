@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Cleaner code for `reddit` & `meme`
 - Adding `hug` command (subcommand of `interact`)
+### Fixed
+- ID in *User* got removed (there is the *ID* field for that)
+- Add *dependencies* Emoji Key
 
 ## [1.3.1-alpha] - 2021-11-08
 ### Changed

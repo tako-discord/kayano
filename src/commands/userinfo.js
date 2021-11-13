@@ -35,7 +35,7 @@ module.exports = {
 				.setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
 				.setColor('YELLOW')
 				.addField('User', [
-					`**❯ User:** ${user.tag} (${user.id})`,
+					`**❯ User:** ${user.tag}`,
 					`**❯ ID:** ${user.id}`,
 					`**❯ Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
 					`**❯ Time Created:** ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
@@ -62,7 +62,7 @@ module.exports = {
 				.setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
 				.setColor('YELLOW')
 				.addField('User', [
-					`**❯ User:** ${user.tag} (${user.id})`,
+					`**❯ User:** ${user.tag}`,
 					`**❯ ID:** ${user.id}`,
 					`**❯ Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
 					`**❯ Time Created:** ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
