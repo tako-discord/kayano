@@ -13,7 +13,7 @@ module.exports = {
 				.addUserOption(option => option.setName('user').setDescription('The user you want to give a hug').setRequired(true)),
 		),
 	async execute(interaction) {
-		if (interaction.options.getSubCommand() == 'hug') {
+		if (interaction.options.getSubcommand() == 'hug') {
 			const data = await fetch('https://some-random-api.ml/animu/hug').then(res => res.json());
 
 			const embed = new MessageEmbed()
