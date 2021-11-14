@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { Permissions } = require('discord.js');
-const { noPermissionText } = require('../../config');
+const { Permissions, MessageEmbed, MessageAttachment } = require('discord.js');
+const { noPermissionText, defaultColor } = require('../../config');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -15,9 +15,17 @@ module.exports = {
 		else {
 			const target = interaction.options.getMember('target');
 			const reason = interaction.options.getString('reason');
+			const image = new MessageAttachment('./assets/ban.png', 'ban.png');
+
+			const embed = new MessageEmbed()
+				.setColor(defaultColor)
+				.setThumbnail('attachment://ban.png')
+				.setTitle(`Successfully banned ${target.tag} (${target.id})`)
+				.setDescription('I successfully banned **${target.username}** for you.')
+				.addField('Reason:', ((reason) ? reason : 'None'));
 
 			target.kick(reason);
-			return interaction.reply({ content: `Kicked: *${target.user.tag} (${target.user.id})*`, ephemeral: true });
+			return interaction.reply({ embeds: [embed], files: [image], ephemeral: true });
 		}
 	},
 };

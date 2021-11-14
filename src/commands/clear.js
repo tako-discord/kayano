@@ -14,6 +14,10 @@ module.exports = {
 			const target = interaction.options.getMember('target');
 			const channel = interaction.channel;
 
+			if (amount > 100) {
+				return interaction.reply({ content: 'You cannot delete more than 100 messages!', ephemeral: true });
+			}
+
 			if (target) {
 				let i = 0;
 				const filtered = [];

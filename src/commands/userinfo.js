@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
-const { developerEmoji, senseiEmoji, donatorEmoji } = require('../../config');
+const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { developerEmoji, senseiEmoji, donatorEmoji, defaultColor } = require('../../config');
 const donators = require('../donators');
 require('dotenv').config();
 
@@ -26,21 +26,24 @@ module.exports = {
 		.setDescription('Get some information about you or a given user.')
 		.addUserOption(option => option.setName('user').setDescription('The user you want the information from')),
 	async execute(interaction) {
+		const image = new MessageAttachment('./assets/user.png', 'user.png');
+
 		if (interaction.options.getUser('user')) {
 			const user = interaction.options.getUser('user');
 			const createdAt = new Date(user.createdTimestamp).toLocaleString('en-GB');
 			const userFlags = user.flags.toArray();
 
 			const embed = new MessageEmbed()
-				.setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
-				.setColor('YELLOW')
+				.setColor(defaultColor)
+				.setThumbnail('attachment://user.png')
 				.addField('User', [
-					`**❯ User:** ${user.tag} (${user.id})`,
+					`**❯ User:** ${user.tag}`,
 					`**❯ ID:** ${user.id}`,
 					`**❯ Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
 					`**❯ Time Created:** ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
 					'\u200b',
-				].join('\n'));
+				].join('\n'))
+				.setImage(user.displayAvatarURL({ dynamic: true, size: 512 }));
 			if (user.id == process.env.OWNER_ID) {
 				embed.setTitle(`Infos for ${user.username}:`);
 				embed.addField(`**${developerEmoji} Developer**`, `${user.username} is my Original Creator & Developer`);
@@ -51,7 +54,7 @@ module.exports = {
 				embed.addField(`**${donatorEmoji} Donator**`, `<@${user.id}> donated to <@751092600890458203>`);
 			}
 
-			await interaction.reply({ embeds: [embed] });
+			await interaction.reply({ embeds: [embed], files: [image] });
 		}
 		else {
 			const user = interaction.user;
@@ -59,15 +62,16 @@ module.exports = {
 			const userFlags = user.flags.toArray();
 
 			const embed = new MessageEmbed()
-				.setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
-				.setColor('YELLOW')
+				.setColor(defaultColor)
+				.setThumbnail('attachment://user.png')
 				.addField('User', [
-					`**❯ User:** ${user.tag} (${user.id})`,
+					`**❯ User:** ${user.tag}`,
 					`**❯ ID:** ${user.id}`,
 					`**❯ Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
 					`**❯ Time Created:** ${createdAt} (dd/mm/yyyy, HH:MM:ss)`,
 					'\u200b',
-				].join('\n'));
+				].join('\n'))
+				.setImage(user.displayAvatarURL({ dynamic: true, size: 512 }));
 			if (user.id == process.env.OWNER_ID) {
 				embed.setTitle(`Infos for ${user.username}:`);
 				embed.addField(`**${developerEmoji} Developer**`, `${user.username} is my Original Creator & Developer`);
@@ -78,7 +82,7 @@ module.exports = {
 				embed.addField(`**${donatorEmoji} Donator**`, `<@${user.id}> donated to <@751092600890458203>`);
 			}
 
-			await interaction.reply({ embeds: [embed] });
+			await interaction.reply({ embeds: [embed], files: [image] });
 		}
 	},
 };

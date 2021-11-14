@@ -8,9 +8,13 @@ const developerEmoji = '<:blob_dev:891643826895212575>';
 // Used for the owner (defined in .env) in the userinfo
 const senseiEmoji = '<:verified:891645797874151445>';
 
+// Used for embeds
+const defaultColor = 'EF9F75';
+
 module.exports = {
 	noPermissionText,
 	donatorEmoji,
 	developerEmoji,
 	senseiEmoji,
+	defaultColor,
 };
