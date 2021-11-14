@@ -16,7 +16,6 @@ module.exports = {
 			.setThumbnail('attachment://echo.png')
 			.setAuthor(interaction.user.tag, interaction.user.avatarURL({ dynamic: true }))
 			.setTitle('Echo')
-			.setThumbnail('https://i.imgur.com/ojCGL7Q.png')
 			.setDescription(msg)
 			.setTimestamp();
 
