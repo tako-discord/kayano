@@ -16,6 +16,10 @@ module.exports = {
 			return interaction.reply({ content: data.message, ephemeral: true });
 		}
 
+		if (data.nsfw == true & interaction.channel.nsfw == false) {
+			return interaction.reply({ content: 'Sorry but the image we found is marked as NSFW and this channel does not allow NSFW content here.', ephemeral: true });
+		}
+
 		const embed = new MessageEmbed()
 			.setColor('#FF4300')
 			.setThumbnail('attachment://reddit.png')

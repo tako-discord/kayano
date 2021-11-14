@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- When using the `reddit` command and the channel is not marked as NSFW but the reddit content is marked as NSFW then don't send the message
 ### Changed
 - Reddit thumbnail inner is now the primary color instead of white
 
