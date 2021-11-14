@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageAttachment } = require('discord.js');
 const fetch = require('node-fetch');
+require('dotenv').config();
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -16,7 +17,13 @@ module.exports = {
 			subcommand
 				.setName('pat')
 				.setDescription('Pat someone')
-				.addUserOption(option => option.setName('user').setDescription('The user you want to pet').setRequired(true)),
+				.addUserOption(option => option.setName('user').setDescription('The user you want to pat').setRequired(true)),
+		)
+		.addSubcommand(subcommand =>
+			subcommand
+				.setName('petpet')
+				.setDescription('Petpet someone')
+				.addUserOption(option => option.setName('user').setDescription('The user you want to petpet').setRequired(true)),
 		),
 	async execute(interaction) {
 		const subcommand = interaction.options.getSubcommand();
@@ -34,7 +41,7 @@ module.exports = {
 
 			interaction.reply({ embeds: [embed] });
 		}
-		// Petpet
+		// Pat
 		if (subcommand == 'pat') {
 			const data = await fetch('https://some-random-api.ml/animu/pat').then(res => res.json());
 
@@ -46,6 +53,18 @@ module.exports = {
 				.setTimestamp();
 
 			interaction.reply({ embeds: [embed] });
+		}
+		// Petpet
+		if (subcommand == 'petpet') {
+			const image = new MessageAttachment(`https://some-random-api.ml/premium/petpet?avatar=${interaction.options.getUser('user').displayAvatarURL({ size: 256, format: 'png' })}&key=${process.env.RNDM_API_KEY}`, 'petpet.gif');
+			const embed = new MessageEmbed()
+				.setColor('#EF9F75')
+				.setDescription(`✋ **${interaction.options.getUser('user').username}**, you've got a petpet from **${interaction.user.username}**.`)
+				.setImage('attachment://petpet.gif')
+				.setFooter('Petpet')
+				.setTimestamp();
+
+			interaction.reply({ embeds: [embed], files: [image] });
 		}
 	},
 };

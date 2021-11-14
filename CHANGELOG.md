@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - `hug` command (subcommand of `interact`)
-- `pat` command (subcommand og `interact`)
+- `pat` command (subcommand of `interact`)
+. `petpet` command (subcommand of `interact`) (requires a [Some Random Api Key](https://some-random-api.ml/docs/welcome/keys))
 - `animal` command which gives out a random image and fact of the given animal
 ### Changed
 - Cleaner code for `reddit` & `meme`
