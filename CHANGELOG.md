@@ -5,9 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `hug` command (subcommand of `interact`)
+- `pat` command (subcommand og `interact`)
+- `animal` command which gives out a random image and fact of the given animal
 ### Changed
 - Cleaner code for `reddit` & `meme`
-- Adding `hug` command (subcommand of `interact`)
 ### Fixed
 - ID in *User* got removed (there is the *ID* field for that)
 - Add *dependencies* Emoji Key

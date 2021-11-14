@@ -9,18 +9,40 @@ module.exports = {
 		.addSubcommand(subcommand =>
 			subcommand
 				.setName('hug')
-				.setDescription('Give an user a hug')
+				.setDescription('Hug someone')
 				.addUserOption(option => option.setName('user').setDescription('The user you want to give a hug').setRequired(true)),
+		)
+		.addSubcommand(subcommand =>
+			subcommand
+				.setName('pat')
+				.setDescription('Pat someone')
+				.addUserOption(option => option.setName('user').setDescription('The user you want to pet').setRequired(true)),
 		),
 	async execute(interaction) {
-		if (interaction.options.getSubcommand() == 'hug') {
+		const subcommand = interaction.options.getSubcommand();
+
+		// Hug
+		if (subcommand == 'hug') {
 			const data = await fetch('https://some-random-api.ml/animu/hug').then(res => res.json());
 
 			const embed = new MessageEmbed()
 				.setColor('#EF9F75')
-				.setDescription(`:hugging: **${interaction.options.getUser('user').username}**, you've got a hug from **${interaction.user.username}**.`)
+				.setDescription(`🤗 **${interaction.options.getUser('user').username}**, you've got a hug from **${interaction.user.username}**.`)
 				.setImage(data.link)
 				.setFooter('Hug')
+				.setTimestamp();
+
+			interaction.reply({ embeds: [embed] });
+		}
+		// Petpet
+		if (subcommand == 'pat') {
+			const data = await fetch('https://some-random-api.ml/animu/pat').then(res => res.json());
+
+			const embed = new MessageEmbed()
+				.setColor('#EF9F75')
+				.setDescription(`✋ **${interaction.options.getUser('user').username}**, you've got a pat from **${interaction.user.username}**.`)
+				.setImage(data.link)
+				.setFooter('Pat')
 				.setTimestamp();
 
 			interaction.reply({ embeds: [embed] });
