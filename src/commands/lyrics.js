@@ -15,6 +15,10 @@ module.exports = {
 		const data = await fetch(`https://some-random-api.ml/lyrics?title=${query}&cancer=${cancer}`).then(res => res.json());
 		const image = new MessageAttachment('./assets/microphone.png', 'microphone.png');
 
+		if (data.error) {
+			return interaction.reply({ content: data.error, ephemeral: true });
+		}
+
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://microphone.png')
