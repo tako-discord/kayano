@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { defaultColor } = require('../../config');
 const fetch = require('node-fetch');
 require('dotenv').config();
 
@@ -33,10 +34,9 @@ module.exports = {
 			const data = await fetch('https://some-random-api.ml/animu/hug').then(res => res.json());
 
 			const embed = new MessageEmbed()
-				.setColor('#EF9F75')
+				.setColor(defaultColor)
 				.setDescription(`🤗 **${interaction.options.getUser('user').username}**, you've got a hug from **${interaction.user.username}**.`)
 				.setImage(data.link)
-				.setFooter('Hug')
 				.setTimestamp();
 
 			interaction.reply({ embeds: [embed] });
@@ -46,10 +46,9 @@ module.exports = {
 			const data = await fetch('https://some-random-api.ml/animu/pat').then(res => res.json());
 
 			const embed = new MessageEmbed()
-				.setColor('#EF9F75')
+				.setColor(defaultColor)
 				.setDescription(`✋ **${interaction.options.getUser('user').username}**, you've got a pat from **${interaction.user.username}**.`)
 				.setImage(data.link)
-				.setFooter('Pat')
 				.setTimestamp();
 
 			interaction.reply({ embeds: [embed] });
@@ -58,10 +57,9 @@ module.exports = {
 		if (subcommand == 'petpet') {
 			const image = new MessageAttachment(`https://some-random-api.ml/premium/petpet?avatar=${interaction.options.getUser('user').displayAvatarURL({ size: 256, format: 'png' })}&key=${process.env.RNDM_API_KEY}`, 'petpet.gif');
 			const embed = new MessageEmbed()
-				.setColor('#EF9F75')
+				.setColor(defaultColor)
 				.setDescription(`✋ **${interaction.options.getUser('user').username}**, you've got a petpet from **${interaction.user.username}**.`)
 				.setImage('attachment://petpet.gif')
-				.setFooter('Petpet')
 				.setTimestamp();
 
 			interaction.reply({ embeds: [embed], files: [image] });

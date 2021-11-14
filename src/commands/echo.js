@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { defaultColor } = require('../../config');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -8,14 +9,17 @@ module.exports = {
 		.addStringOption(option => option.setName('message').setDescription('The message the bot should send.').setRequired(true)),
 	async execute(interaction) {
 		const msg = interaction.options.getString('message');
+		const image = new MessageAttachment('./assets/echo.png', 'echo.png');
 
 		const embed = new MessageEmbed()
+			.setColor(defaultColor)
+			.setThumbnail('attachment://echo.png')
 			.setAuthor(interaction.user.tag, interaction.user.avatarURL({ dynamic: true }))
 			.setTitle('Echo')
 			.setThumbnail('https://i.imgur.com/ojCGL7Q.png')
 			.setDescription(msg)
 			.setTimestamp();
 
-		await interaction.reply({ embeds: [embed] });
+		await interaction.reply({ embeds: [embed], files: [image] });
 	},
 };

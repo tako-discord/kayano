@@ -4,17 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.4.0-alpha] - 2021-11-08
 ### Added
 - `hug` command (subcommand of `interact`)
 - `pat` command (subcommand of `interact`)
 . `petpet` command (subcommand of `interact`) (requires a [Some Random Api Key](https://some-random-api.ml/docs/welcome/keys))
 - `animal` command which gives out a random image and fact of the given animal
+- `lyrics` command
+- New Embed Design
+- Local Thumbnails for Embeds
+- Overall also more embeds
 ### Changed
 - Cleaner code for `reddit` & `meme`
 ### Fixed
 - ID in *User* got removed (there is the *ID* field for that)
 - Add *dependencies* Emoji Key
+- `clear` command throwing console error when trying to delete more than 100 messages. (now just send the user the feedback)
 
 ## [1.3.1-alpha] - 2021-11-08
 ### Changed
@@ -115,6 +120,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
+[1.4.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.3.1-alpha...v1.4.0-alpha
 [1.3.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.3.0-alpha...v1.3.1-alpha
 [1.2.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.1-alpha...v1.2.0-alpha
 [1.1.1-alpha]: https://github.com/kayano-bot/kayano/compare/v1.1.0-alpha...v1.1.1-alpha

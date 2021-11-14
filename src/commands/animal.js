@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { defaultColor } = require('../../config');
 const fetch = require('node-fetch');
 
 module.exports = {
@@ -24,16 +25,17 @@ module.exports = {
 		const animal = ((animalOption == 'red_panda') ? 'red panda' : animalOption);
 		const animalEmoji = ((animal == 'red panda') ? 'red_circle: :panda_face' : animal);
 		const data = await fetch(`https://some-random-api.ml/animal/${animalOption}`).then(res => res.json());
+		const image = new MessageAttachment('./assets/nature.png', 'nature.png');
 
 		const embed = new MessageEmbed()
-			.setColor('#EF9F75')
+			.setColor(defaultColor)
+			.setThumbnail('attachment://nature.png')
 			.setDescription(`:${((animal == 'panda' ? 'panda_face' : animalEmoji))}: Here is a random image and fact of a ${animal}`)
 			.addField('Fact:', data.fact)
 			.addField('Image:', '\u200b')
 			.setImage(data.image)
-			.setFooter(animal)
 			.setTimestamp();
 
-		interaction.reply({ embeds: [embed] });
+		interaction.reply({ embeds: [embed], files: [image] });
 	},
 };

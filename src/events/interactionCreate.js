@@ -1,5 +1,5 @@
 const client = require('../index');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageAttachment } = require('discord.js');
 require('dotenv').config();
 
 module.exports = {
@@ -17,10 +17,11 @@ module.exports = {
 				console.error(error);
 				interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 
+				const image = new MessageAttachment('./assets/error.png', 'error.png');
 				const embed = new MessageEmbed()
 					.setColor('RED')
+					.setThumbnail('attachment://error.png')
 					.setTitle('An error ocurred!')
-					.setThumbnail('https://i.imgur.com/CWGftvk.png')
 					.setDescription([
 						'**Details:**',
 						`*Executed Command:* \`${interaction.commandName}\``,
@@ -32,7 +33,7 @@ module.exports = {
 					].join('\n'))
 					.setTimestamp();
 
-				client.channels.cache.get(process.env.ERROR_CHANNEL).send({ embeds: [embed] });
+				client.channels.cache.get(process.env.ERROR_CHANNEL).send({ embeds: [embed], files: [image] });
 			}
 		}
 		else {
