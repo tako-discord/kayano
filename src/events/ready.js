@@ -14,7 +14,6 @@ module.exports = {
 		const activities = [
 			`with version ${version}`,
 			`on ${client.guilds.cache.size} servers`,
-			'red light, green light',
 		];
 
 		let i = 0;
