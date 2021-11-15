@@ -16,6 +16,6 @@ module.exports = {
 			},
 		});
 
-		interaction.reply({ content: myUwuifier.uwuifySentence(text) });
+		await interaction.reply({ content: myUwuifier.uwuifySentence(text) });
 	},
 };

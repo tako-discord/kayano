@@ -21,6 +21,6 @@ module.exports = {
 			.setFooter(`r/${data.subreddit} • ${data.ups} 👍`)
 			.setTimestamp();
 
-		interaction.reply({ embeds: [embed], files: [image] });
+		await interaction.reply({ embeds: [embed], files: [image] });
 	},
 };

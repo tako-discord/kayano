@@ -7,6 +7,6 @@ module.exports = {
 	async execute(interaction) {
 		const message = interaction.options.getMessage('message');
 
-		interaction.reply({ content: codeBlock(message.content), ephemeral: true });
+		await interaction.reply({ content: codeBlock(message.content), ephemeral: true });
 	},
 };

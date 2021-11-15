@@ -15,7 +15,7 @@ module.exports = {
 			const channel = interaction.channel;
 
 			if (amount > 100) {
-				return interaction.reply({ content: 'You cannot delete more than 100 messages!', ephemeral: true });
+				return await interaction.reply({ content: 'You cannot delete more than 100 messages!', ephemeral: true });
 			}
 
 			if (target) {
@@ -31,13 +31,13 @@ module.exports = {
 
 				await channel.bulkDelete(filtered, true).then(messages => {
 					if (messages.size == 0) {
-						interaction.reply({ content: `🧹 Cleared 1 message from ${target}!` });
+						await interaction.reply({ content: `🧹 Cleared 1 message from ${target}!` });
 						setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
 					}
 					else {
-						interaction.reply({ content: `🧹 Cleared ${messages.size} messages from ${target}!` });
+						await interaction.reply({ content: `🧹 Cleared ${messages.size} messages from ${target}!` });
 						setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
@@ -47,13 +47,13 @@ module.exports = {
 			else {
 				await channel.bulkDelete(amount, true).then(messages => {
 					if (messages.size == 0) {
-						interaction.reply({ content: '🧹 Cleared 1 message from this channel!' });
+						await interaction.reply({ content: '🧹 Cleared 1 message from this channel!' });
 						return setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
 					}
 					else {
-						interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from this channel!` });
+						await interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from this channel!` });
 						setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
@@ -62,7 +62,7 @@ module.exports = {
 			}
 		}
 		else {
-			return interaction.reply({ content: noPermissionText, ephemeral: true });
+			return await interaction.reply({ content: noPermissionText, ephemeral: true });
 		}
 	},
 };

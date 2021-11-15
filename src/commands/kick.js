@@ -10,7 +10,7 @@ module.exports = {
 		.addStringOption(option => option.setName('reason').setDescription('The reason you kick the member')),
 	async execute(interaction) {
 		if (!interaction.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) {
-			return interaction.reply({ content: noPermissionText, ephemeral: true });
+			return await interaction.reply({ content: noPermissionText, ephemeral: true });
 		}
 		else {
 			const target = interaction.options.getMember('target');
@@ -25,7 +25,7 @@ module.exports = {
 				.addField('Reason:', ((reason) ? reason : 'None'));
 
 			target.kick(reason);
-			return interaction.reply({ embeds: [embed], files: [image], ephemeral: true });
+			return await interaction.reply({ embeds: [embed], files: [image], ephemeral: true });
 		}
 	},
 };

@@ -13,11 +13,11 @@ module.exports = {
 		const image = new MessageAttachment('./assets/reddit.png', 'reddit.png');
 
 		if (data.message == `r/${subreddit.toLowerCase()} has no Posts with Images`) {
-			return interaction.reply({ content: data.message, ephemeral: true });
+			return await interaction.reply({ content: data.message, ephemeral: true });
 		}
 
 		if (data.nsfw == true & interaction.channel.nsfw == false) {
-			return interaction.reply({ content: 'Sorry but the image we found is marked as NSFW and this channel does not allow NSFW content.', ephemeral: true });
+			return await interaction.reply({ content: 'Sorry but the image we found is marked as NSFW and this channel does not allow NSFW content.', ephemeral: true });
 		}
 
 		const embed = new MessageEmbed()
@@ -30,6 +30,6 @@ module.exports = {
 			.setFooter(`r/${data.subreddit} • ${data.ups} 👍`)
 			.setTimestamp();
 
-		interaction.reply({ embeds: [embed], files: [image] });
+		await interaction.reply({ embeds: [embed], files: [image] });
 	},
 };

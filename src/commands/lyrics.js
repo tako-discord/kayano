@@ -16,7 +16,7 @@ module.exports = {
 		const image = new MessageAttachment('./assets/microphone.png', 'microphone.png');
 
 		if (data.error) {
-			return interaction.reply({ content: data.error, ephemeral: true });
+			return await interaction.reply({ content: data.error, ephemeral: true });
 		}
 
 		const embed = new MessageEmbed()
@@ -34,6 +34,6 @@ module.exports = {
 			.setTimestamp();
 
 		// eslint-disable-next-line no-unused-vars
-		interaction.reply({ embeds: [embed], files: [image], ephemeral: true }).catch(error => {interaction.reply({ embeds: [errorEmbed], files: [image], ephemeral: true });});
+		await interaction.reply({ embeds: [embed], files: [image], ephemeral: true }).catch(error => {interaction.reply({ embeds: [errorEmbed], files: [image], ephemeral: true });});
 	},
 };

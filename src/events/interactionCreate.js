@@ -15,7 +15,7 @@ module.exports = {
 			}
 			catch (error) {
 				console.error(error);
-				interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+				await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 
 				const image = new MessageAttachment('./assets/error.png', 'error.png');
 				const embed = new MessageEmbed()

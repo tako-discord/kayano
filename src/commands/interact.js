@@ -39,7 +39,7 @@ module.exports = {
 				.setImage(data.link)
 				.setTimestamp();
 
-			interaction.reply({ embeds: [embed] });
+			await interaction.reply({ embeds: [embed] });
 		}
 		// Pat
 		if (subcommand == 'pat') {
@@ -51,7 +51,7 @@ module.exports = {
 				.setImage(data.link)
 				.setTimestamp();
 
-			interaction.reply({ embeds: [embed] });
+			await interaction.reply({ embeds: [embed] });
 		}
 		// Petpet
 		if (subcommand == 'petpet') {
@@ -62,7 +62,7 @@ module.exports = {
 				.setImage('attachment://petpet.gif')
 				.setTimestamp();
 
-			interaction.reply({ embeds: [embed], files: [image] });
+			await interaction.reply({ embeds: [embed], files: [image] });
 		}
 	},
 };

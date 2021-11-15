@@ -36,6 +36,6 @@ module.exports = {
 			.setImage(data.image)
 			.setTimestamp();
 
-		interaction.reply({ embeds: [embed], files: [image] });
+		await interaction.reply({ embeds: [embed], files: [image] });
 	},
 };
