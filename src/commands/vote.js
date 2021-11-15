@@ -5,7 +5,7 @@ const { defaultColor, voteLink } = require('../../config');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('vote')
-		.description('Get the link to vote for me'),
+		.setDescription('Get the link to vote for me'),
 	async execute(interaction) {
 		const image = new MessageAttachment('./assets/thumbsUp.png', 'vote.png');
 

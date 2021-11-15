@@ -31,13 +31,13 @@ module.exports = {
 
 				await channel.bulkDelete(filtered, true).then(messages => {
 					if (messages.size == 0) {
-						await interaction.reply({ content: `🧹 Cleared 1 message from ${target}!` });
+						interaction.reply({ content: `🧹 Cleared 1 message from ${target}!` });
 						setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
 					}
 					else {
-						await interaction.reply({ content: `🧹 Cleared ${messages.size} messages from ${target}!` });
+						interaction.reply({ content: `🧹 Cleared ${messages.size} messages from ${target}!` });
 						setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
@@ -47,13 +47,13 @@ module.exports = {
 			else {
 				await channel.bulkDelete(amount, true).then(messages => {
 					if (messages.size == 0) {
-						await interaction.reply({ content: '🧹 Cleared 1 message from this channel!' });
+						interaction.reply({ content: '🧹 Cleared 1 message from this channel!' });
 						return setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
 					}
 					else {
-						await interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from this channel!` });
+						interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from this channel!` });
 						setTimeout(function() {
 							interaction.deleteReply();
 						}, 5000);
