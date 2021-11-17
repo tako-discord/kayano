@@ -5,7 +5,7 @@ const { defaultColor } = require('../../config');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('avatar')
-		.setDescription('Get the Avatar of yourself or a given user.')
+		.setDescription('Get the Avatar of yourself or a given user')
 		.addUserOption(option => option.setName('user').setDescription('The user you want the avatar from')),
 	async execute(interaction) {
 		const user = interaction.options.getUser('user');

@@ -4,9 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.4.5-alpha] - 2021-11-17
+### Added
+- `ping` command (messages customizable in `config.js`)
+- More consitency in the commands description
 ### Removed
 - Squid Game reference in the activities
+### Fixed
+- Bot crashes when using a command that the bot does not have permission for (`ban`, `kick` etc.)
+- Some general security issues with `kick` & `ban` command
+### Known Issues
+- `kick` and `ban` says she kicked *undefined* even though she kicked the person you specified
 
 ## [1.4.4-alpha] - 2021-11-15
 ### Added
@@ -143,6 +151,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
+[1.4.4-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.4-alpha...v1.4.5-alpha
 [1.4.4-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.3-alpha...v1.4.4-alpha
 [1.4.3-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.2-alpha...v1.4.3-alpha
 [1.4.2-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.1-alpha...v1.4.2-alpha
