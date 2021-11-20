@@ -1,12 +1,14 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { Permissions, MessageActionRow, MessageSelectMenu } = require('discord.js');
-const { noPermissionText } = require('../../config');
+const { SlashCommandBuilder, bold } = require('@discordjs/builders');
+const { Permissions, MessageActionRow, MessageSelectMenu, MessageEmbed, MessageAttachment } = require('discord.js');
+const { noPermissionText, defaultColor } = require('../../config');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('reactionrole')
 		.setDescription('Sends a message and adds a dropdown menu to select roles to it')
-		.addStringOption(option => option.setName('message').setDescription('The message to sent').setRequired(true))
+		.addStringOption(option => option.setName('title').setDescription('The title of the message').setRequired(true))
+		.addStringOption(option => option.setName('description').setDescription('The description of the message').setRequired(true))
+		.addBooleanOption(option => option.setName('embed').setDescription('If the message should be send as an embed or not').setRequired(true))
 		.addRoleOption(option => option.setName('role_1').setDescription('A role to add').setRequired(true))
 		.addRoleOption(option => option.setName('role_2').setDescription('A role to add'))
 		.addRoleOption(option => option.setName('role_3').setDescription('A role to add'))
@@ -95,6 +97,24 @@ module.exports = {
 			]);
 		});
 
-		await interaction.reply({ content: interaction.options.getString('message'), components: [row] });
+		if (interaction.options.getBoolean('embed') == true) {
+			const image = new MessageAttachment('./assets/roles.png', 'roles.png');
+			const embed = new MessageEmbed()
+				.setColor(defaultColor)
+				.setThumbnail('attachment://roles.png')
+				.setTitle(interaction.options.getString('title'))
+				.setDescription(interaction.options.getString('description'));
+
+			await interaction.reply({ embeds: [embed], files: [image], components: [row] });
+		}
+		else {
+			const msg = [
+				bold(interaction.options.getString('title')),
+				interaction.options.getString('description'),
+			].join('\n');
+
+			await interaction.reply({ content: msg, components: [row] });
+		}
+
 	},
 };
