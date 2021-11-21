@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.5.1-alpha] -  2021-11-21
 ### Added
 - `slowmode` command to set a slowmode for a specific or the current channel
+- Option for `reactionrole` to set `max_values` which can limit the amount of roles a user can have
 
 ## [1.5.0-alpha] - 2021-11-20
 ### Added

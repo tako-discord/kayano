@@ -10,6 +10,7 @@ module.exports = {
 		.addStringOption(option => option.setName('description').setDescription('The description of the message').setRequired(true))
 		.addBooleanOption(option => option.setName('embed').setDescription('If the message should be send as an embed or not').setRequired(true))
 		.addRoleOption(option => option.setName('role_1').setDescription('A role to add').setRequired(true))
+		.addNumberOption(option => option.setName('max_values').setDescription('The maximum of roles a user can pick (Default: 0/infinite)'))
 		.addRoleOption(option => option.setName('role_2').setDescription('A role to add'))
 		.addRoleOption(option => option.setName('role_3').setDescription('A role to add'))
 		.addRoleOption(option => option.setName('role_4').setDescription('A role to add'))
@@ -78,12 +79,16 @@ module.exports = {
 			if (role10.name == '@everyone') {return interaction.reply({ content: '@everyone is not a valid role', ephemeral: true });}
 		}
 
+		let maxValues;
+		if (interaction.options.getNumber('max_values')) { maxValues = interaction.options.getNumber('max_values'); }
+		else { maxValues = roles.length; }
+
 		const row = new MessageActionRow()
 			.addComponents(
 				new MessageSelectMenu()
 					.setCustomId('auto_roles')
 					.setPlaceholder('Nothing selected')
-					.setMaxValues(roles.length)
+					.setMaxValues(maxValues)
 					.setMinValues(0),
 			);
 
