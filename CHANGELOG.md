@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0-alpha.0](https://github.com/kayano-bot/kayano/compare/v1.7.0...v1.8.0-alpha.0) (2021-11-22)
+
+
+### Features
+
+* **standard-version:** add --prerelease flag ([4112ffc](https://github.com/kayano-bot/kayano/commit/4112ffc837ab74fe24c882e06cce1c6c35fc62ee))
+
 ## [1.7.0](https://github.com/kayano-bot/kayano/compare/v1.6.0-alpha...v1.7.0) (2021-11-22)
 
 
