@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1-alpha] -  2021-11-21
+### Added
+- `slowmode` command to set a slowmode for a specific or the current channel
+- Option for `reactionrole` to set `max_values` which can limit the amount of roles a user can have
+
+## [1.5.0-alpha] - 2021-11-20
+### Added
+- `reactionrole` command (messiest code I've ever seen but if I come up with a better solution I will tidy it all up)
+
 ## [1.4.5-alpha] - 2021-11-17
 ### Added
 - `ping` command (messages customizable in `config.js`)
@@ -151,7 +160,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Inital commit
 
 [Unreleased]: https://github.com/kayano-bot/kayano/compare/stable...development
-[1.4.4-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.4-alpha...v1.4.5-alpha
+[1.5.0-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.5-alpha...v1.5.0-alpha
+[1.4.5-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.4-alpha...v1.4.5-alpha
 [1.4.4-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.3-alpha...v1.4.4-alpha
 [1.4.3-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.2-alpha...v1.4.3-alpha
 [1.4.2-alpha]: https://github.com/kayano-bot/kayano/compare/v1.4.1-alpha...v1.4.2-alpha

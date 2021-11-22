@@ -1,11 +1,37 @@
 const client = require('../index');
-const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { MessageEmbed, MessageAttachment, Permissions } = require('discord.js');
+const { noBotPermissionText } = require('../../config');
 require('dotenv').config();
 
 module.exports = {
 	name: 'interactionCreate',
 	async execute(interaction) {
-		if (interaction.isCommand() || interaction.isContextMenu()) {
+		if (interaction.isCommand() || interaction.isContextMenu() || interaction.isSelectMenu()) {
+			if (interaction.isSelectMenu()) {
+				const { customId, values, member } = interaction;
+
+				if (customId == 'auto_roles') {
+					if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) {
+						return await interaction.reply({ content: noBotPermissionText, ephemeral: true });
+					}
+
+					const component = interaction.component;
+					const removed = component.options.filter((option) => {
+						return !values.includes(option.value);
+					});
+
+					for (const id of removed) {
+						member.roles.remove(id.value);
+					}
+
+					for (const id of values) {
+						member.roles.add(id);
+					}
+
+					interaction.reply({ content: 'Your Roles got updated!', ephemeral: true });
+				}
+			}
+
 			const command = client.commands.get(interaction.commandName);
 
 			if (!command) return;
