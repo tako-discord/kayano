@@ -20,7 +20,7 @@ In a terminal run the following commands:
     - Start the RPC (your activity) ad
     - Register commands (so that you can actually use the commands)
     - Update the Bot to it's latest version
-    - Quit (you can also achieve the same by pressing `ctrl+c
+    - Quit (you can also achieve the same by pressing `ctrl+c`)
 
 ## 🤝 Contributing
 1. Fork the repository
