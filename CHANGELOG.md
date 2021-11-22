@@ -1,8 +1,15 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.6.0](https://github.com/kayano-bot/kayano/compare/v1.5.1-alpha...v1.6.0) (2021-11-22)
+
+
+### Features
+
+* **cz:** added ([3e67490](https://github.com/kayano-bot/kayano/commit/3e67490cbb2abd708a25026f4230e1dd42baeae9))
+* **scripts:** add changelog and bump script ([852df7a](https://github.com/kayano-bot/kayano/commit/852df7a66b04562e969f8903f1077485425ffd7d))
+* **standard-version:** added ([281c43f](https://github.com/kayano-bot/kayano/commit/281c43f9e4924b89a5e4c471b6ff9a1c82452532))
 
 ## [1.5.1-alpha] -  2021-11-21
 ### Added
