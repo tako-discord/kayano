@@ -8,9 +8,8 @@
     "registerCommands": "node ./src/deploy-commands",
     "lint": "eslint .",
     "helper": "node ./helper.js",
-    "commit": "cz c",
-    "changelog": "cz ch",
-    "bump": "cz ch"
+    "commit": "cz",
+    "release": "standard-version"
   },
   "keywords": [
     "bot",
@@ -37,7 +36,8 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^8.2.0"
+    "eslint": "^8.2.0",
+    "standard-version": "^9.3.2"
   },
   "config": {
     "commitizen": {
