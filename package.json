@@ -7,7 +7,8 @@
     "start": "node .",
     "registerCommands": "node ./src/deploy-commands",
     "lint": "eslint .",
-    "helper": "node ./helper.js"
+    "helper": "node ./helper.js",
+    "commit": "cz"
   },
   "keywords": [
     "bot",
@@ -20,10 +21,12 @@
     "@discordjs/builders": "^0.8.2",
     "@discordjs/rest": "^0.1.1-canary.0",
     "colors": "^1.4.0",
+    "commitizen": "^4.2.4",
     "discord-api-types": "^0.24.0",
     "discord-rpc": "^4.0.1",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
+    "global": "^4.4.0",
     "inquirer": "^8.2.0",
     "ms": "^2.1.3",
     "node-fetch": "^2.6.6",
@@ -31,6 +34,12 @@
     "uwuifier": "^4.0.4"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
