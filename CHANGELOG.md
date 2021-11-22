@@ -2,14 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.6.0](https://github.com/kayano-bot/kayano/compare/v1.6.0-alpha...v1.6.0) (2021-11-22)
-
-
-### Bug Fixes
-
-* **package.json:** add -alpha suffix ([7617ca4](https://github.com/kayano-bot/kayano/commit/7617ca4db0150fb0ac7cea586510d1f1c806c117))
-
-## [1.6.0-alpha](https://github.com/kayano-bot/kayano/compare/v1.5.1-alpha...v1.6.0-alpha) (2021-11-22)
+## [1.6.0](https://github.com/kayano-bot/kayano/compare/v1.5.1-alpha...v1.6.0-alpha) (2021-11-22)
 ### Features
 
 * **cz:** added ([3e67490](https://github.com/kayano-bot/kayano/commit/3e67490cbb2abd708a25026f4230e1dd42baeae9))
