@@ -8,7 +8,9 @@
     "registerCommands": "node ./src/deploy-commands",
     "lint": "eslint .",
     "helper": "node ./helper.js",
-    "commit": "cz"
+    "commit": "cz c",
+    "changelog": "cz ch",
+    "bump": "cz ch"
   },
   "keywords": [
     "bot",
