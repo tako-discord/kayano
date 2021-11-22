@@ -21,7 +21,14 @@ In a terminal run the following commands:
     - Register commands (so that you can actually use the commands)
     - Update the Bot to it's latest version
     - Quit (you can also achieve the same by pressing `ctrl+c
-
+## 🤝 Contributing
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/<your-username>/kayano.git`
+3. Create your feature branch: `git checkout -b my-new-feature`
+4. Stage changes: `git add .`
+5. Commit your changes: `cz` OR `yarn run commit` do **not** use `git commit`
+6. Push to the branch: `git push origin my-new-feature`
+7. Submit a pull request
 ## Contributors ✨
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
