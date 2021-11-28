@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.8.0-alpha.2...v1.8.1-alpha) (2021-11-28)
+
+
+### Features
+
+* **scripts:** make the user choose the version (release) ([377b654](https://github.com/kayano-bot/kayano/commit/377b654cb8232b1b5e137f425c1a81db5641962d))
+
 ## [1.8.0-alpha.2](https://github.com/kayano-bot/kayano/compare/v1.8.0-alpha.1...v1.8.0-alpha.2) (2021-11-28)
 
 
