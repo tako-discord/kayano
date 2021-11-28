@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.3.0",
     "standard-version": "^9.3.2"
   },
   "config": {
