@@ -3,6 +3,29 @@ const { MessageEmbed, MessageAttachment, Permissions } = require('discord.js');
 const { noBotPermissionText } = require('../../config');
 require('dotenv').config();
 
+async function errorFunction(interaction, error) {
+	console.error(error);
+	await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+
+	const image = new MessageAttachment('./assets/error.png', 'error.png');
+	const embed = new MessageEmbed()
+		.setColor('RED')
+		.setThumbnail('attachment://error.png')
+		.setTitle('An error ocurred!')
+		.setDescription([
+			'**Details:**',
+			`*Executed Command:* \`${interaction.commandName}\``,
+			'',
+			'**Error:**',
+			'```',
+			`${error}`,
+			'```',
+		].join('\n'))
+		.setTimestamp();
+
+	client.channels.cache.get(process.env.ERROR_CHANNEL).send({ embeds: [embed], files: [image] });
+}
+
 module.exports = {
 	name: 'interactionCreate',
 	async execute(interaction) {
@@ -21,11 +44,13 @@ module.exports = {
 					});
 
 					for (const id of removed) {
-						member.roles.remove(id.value);
+						member.roles.remove(id.value)
+							.catch(e => errorFunction(interaction, e));
 					}
 
 					for (const id of values) {
-						member.roles.add(id);
+						member.roles.add(id)
+							.catch(e => errorFunction(interaction, e));
 					}
 
 					interaction.reply({ content: 'Your Roles got updated!', ephemeral: true });
@@ -36,31 +61,8 @@ module.exports = {
 
 			if (!command) return;
 
-			try {
-				await command.execute(interaction, client);
-			}
-			catch (error) {
-				console.error(error);
-				await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-
-				const image = new MessageAttachment('./assets/error.png', 'error.png');
-				const embed = new MessageEmbed()
-					.setColor('RED')
-					.setThumbnail('attachment://error.png')
-					.setTitle('An error ocurred!')
-					.setDescription([
-						'**Details:**',
-						`*Executed Command:* \`${interaction.commandName}\``,
-						'',
-						'**Error:**',
-						'```',
-						`${error}`,
-						'```',
-					].join('\n'))
-					.setTimestamp();
-
-				client.channels.cache.get(process.env.ERROR_CHANNEL).send({ embeds: [embed], files: [image] });
-			}
+			await command.execute(interaction, client)
+				.catch(e => errorFunction(interaction, e));
 		}
 		else {
 			return;
