@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0-alpha.2](https://github.com/kayano-bot/kayano/compare/v1.8.0-alpha.1...v1.8.0-alpha.2) (2021-11-28)
+
+
+### Bug Fixes
+
+* **changelog:** remove (empty) version ([e17af35](https://github.com/kayano-bot/kayano/commit/e17af3598519e23d48a3a793bf25b849e1af4544))
+* **error handling:** now uses catch statement ([863a4b3](https://github.com/kayano-bot/kayano/commit/863a4b3f4be2594837c2dc78410e97655d3b1f4d))
+
 ## [1.8.0-alpha.0](https://github.com/kayano-bot/kayano/compare/v1.7.0...v1.8.0-alpha.0) (2021-11-22)
 
 
