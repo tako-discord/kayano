@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "helper": "node ./helper.js",
     "commit": "cz",
-    "release": "standard-version --prerelease alpha"
+    "release": "standard-version --release-as"
   },
   "keywords": [
     "bot",
