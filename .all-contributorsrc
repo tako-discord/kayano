@@ -26,11 +26,12 @@
       "symbol": "📦",
       "description": "Managing dependencies.",
       "link": "%= contributor.profile %"
-    }
+    },
   "contributorsPerLine": 7,
   "projectName": "kayano",
   "projectOwner": "kayano-bot",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true
+  }
 }
