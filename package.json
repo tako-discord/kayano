@@ -19,7 +19,7 @@
   "author": "Pukima",
   "license": "MIT",
   "dependencies": {
-    "@discordjs/builders": "^0.8.2",
+    "@discordjs/builders": "^0.9.0",
     "@discordjs/rest": "^0.1.1-canary.0",
     "colors": "^1.4.0",
     "commitizen": "^4.2.4",
