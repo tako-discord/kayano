@@ -1,6 +1,6 @@
 # Kayano
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=for-the-badge)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![License](https://img.shields.io/github/license/kayano-bot/kayano?style=for-the-badge)
 ![package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/kayano-bot/kayano/discord.js?style=for-the-badge)
@@ -36,7 +36,8 @@ In a terminal run the following commands:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://pukima.site"><img src="https://avatars.githubusercontent.com/u/58347116?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pukima</b></sub></a><br /><a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Code">💻</a> <a href="#maintenance-Pukimaa" title="Maintenance">🚧</a> <a href="https://github.com/kayano-bot/kayano/pulls?q=is%3Apr+reviewed-by%3APukimaa" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Tests">⚠️</a> <a href="#ideas-Pukimaa" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://pukima.site"><img src="https://avatars.githubusercontent.com/u/58347116?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pukima</b></sub></a><br /><a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Code">💻</a> <a href="#maintenance-Pukimaa" title="Maintenance">🚧</a> <a href="https://github.com/kayano-bot/kayano/pulls?q=is%3Apr+reviewed-by%3APukimaa" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/kayano-bot/kayano/commits?author=Pukimaa" title="Tests">⚠️</a> <a href="#ideas-Pukimaa" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-Pukimaa" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/features/security"><img src="https://avatars.githubusercontent.com/u/27347476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dependabot</b></sub></a><br /><a href="#dependencies-dependabot" title="Managing dependencies">📦</a></td>
   </tr>
 </table>
 

@@ -1,10 +1,21 @@
 {
+  "projectName": "kayano",
+  "projectOwner": "kayano-bot",
+  "repoType": "github",
+  "repoHost": "https://github.com",
   "files": [
     "README.md"
   ],
   "imageSize": 100,
-  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=for-the-badge)](#contributors)",
   "commit": false,
+  "contributorsPerLine": 7,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=for-the-badge)](#contributors)",
+  "types": {
+    "dependencies": {
+      "symbol": "📦",
+      "description": "Dependency Management"
+    }
+  },
   "contributors": [
     {
       "login": "Pukimaa",
@@ -19,19 +30,16 @@
         "ideas",
         "projectManagement"
       ]
+    },
+    {
+      "login": "dependabot",
+      "name": "Dependabot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27347476?v=4",
+      "profile": "https://github.com/features/security",
+      "contributions": [
+        "dependencies"
+      ]
     }
   ],
-  "types": {
-    "dependencies": {
-      "symbol": "📦",
-      "description": "Managing dependencies.",
-      "link": "%= contributor.profile %"
-    },
-  "contributorsPerLine": 7,
-  "projectName": "kayano",
-  "projectOwner": "kayano-bot",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "skipCi": true
-  }
+  "commitConvention": "none"
 }
