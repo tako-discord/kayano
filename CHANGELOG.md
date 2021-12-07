@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.0-alpha...v1.9.1-alpha) (2021-12-07)
+
+
+### Bug Fixes
+
+* **commands > autopublish:** fixed bot crashing when it has missing permissions to crosspost ([f7dd300](https://github.com/kayano-bot/kayano/commit/f7dd300e820e18a6c3bc884f3a23b6bb1facb823))
+
 ## [1.9.0-alpha](https://github.com/kayano-bot/kayano/compare/v1.8.1-alpha...v1.9.0-alpha) (2021-12-07)
 
 
