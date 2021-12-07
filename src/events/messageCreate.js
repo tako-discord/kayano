@@ -9,8 +9,6 @@ module.exports = {
 				.select('crosspost')
 				.eq('channel_id', `${message.channel.id}`);
 
-			console.log(data);
-
 			if (!data.length) {
 				return;
 			}
