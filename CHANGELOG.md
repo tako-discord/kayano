@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.2-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.1-alpha...v1.9.2-alpha) (2021-12-07)
+
+
+### Features
+
+* **commands > autopublish:** renamed to crosspost ([b4e223a](https://github.com/kayano-bot/kayano/commit/b4e223ae1b8ee27cfdc513e08d1023f80bc7c2fe))
+* **commands > vote:** added link button ([8eb2d94](https://github.com/kayano-bot/kayano/commit/8eb2d94bac4815ec9d8524dece4b339a24b20dab))
+
 ### [1.9.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.0-alpha...v1.9.1-alpha) (2021-12-07)
 
 
