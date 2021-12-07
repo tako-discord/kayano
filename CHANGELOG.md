@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.9.3-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.2-alpha...v1.9.3-alpha) (2021-12-07)
+### [1.9.3-alpha](https://github.com/kayano-bot/kayano/compare/73a2abc8f3c0a50cc2fa125f264ea5c9a0344606...v1.9.3-alpha) (2021-12-07)
 
 
 ### Bug Fixes
 
 * **commands > autopublish:** removing old file ([1ea374c](https://github.com/kayano-bot/kayano/commit/1ea374c7233288200ff4b4ed153cab0bd93c5666))
 
-### [1.9.2-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.1-alpha...v1.9.2-alpha) (2021-12-07)
+### [1.9.2-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.1-alpha...73a2abc8f3c0a50cc2fa125f264ea5c9a0344606) (2021-12-07)
 
 
 ### Features
