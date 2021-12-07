@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0-alpha](https://github.com/kayano-bot/kayano/compare/v1.8.1-alpha...v1.9.0-alpha) (2021-12-07)
+
+
+### Features
+
+* **all-contributors:** switching to CLI, added Dependabot ([f3d36f5](https://github.com/kayano-bot/kayano/commit/f3d36f5415298f656ab83ef357b694ad2a7154a4))
+* **commands:** added autopublish ([6773032](https://github.com/kayano-bot/kayano/commit/677303239bcf3e35f74eba070d3b8912726b0a95))
+
+
+### Bug Fixes
+
+* **all contributors:** wrong syntax ([c3d5147](https://github.com/kayano-bot/kayano/commit/c3d514776bc9e3853f45641f57fcf9082ee7c380))
+
 ### [1.8.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.8.0-alpha.2...v1.8.1-alpha) (2021-11-28)
 
 
