@@ -14,8 +14,8 @@ const senseiEmoji = '<:verified:891645797874151445>';
 // Used for embeds
 const defaultColor = 'EF9F75';
 
-// Used for the vote command (don't forget the https:// at the beginning)
-const voteLink = '[Top.gg](https://top.gg/bot/878366398269771847)';
+// Used for the vote command
+const voteLink = 'https://top.gg/bot/878366398269771847/vote';
 
 // Flags used in the userinfo command
 const flags = {

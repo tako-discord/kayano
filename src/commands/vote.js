@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageAttachment, MessageEmbed } = require('discord.js');
+const { MessageAttachment, MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const { defaultColor, voteLink } = require('../../config');
 
 module.exports = {
@@ -13,8 +13,17 @@ module.exports = {
 			.setColor(defaultColor)
 			.setThumbnail('attachment://vote.png')
 			.setTitle('Vote for me!')
-			.setDescription(`You can vote for me here: ${voteLink}`);
+			.setDescription('You can click the button below to vote for me.');
 
-		await interaction.reply({ embeds: [embed], files: [image] });
+		const row = new MessageActionRow()
+			.addComponents(
+				new MessageButton()
+					.setURL(voteLink)
+					.setEmoji('👍')
+					.setLabel('Vote')
+					.setStyle('LINK'),
+			);
+
+		await interaction.reply({ embeds: [embed], files: [image], components: [row] });
 	},
 };
