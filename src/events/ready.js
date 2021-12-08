@@ -1,4 +1,5 @@
 const { version } = require('../../package.json');
+const { loadLanguages } = require('../languages');
 
 module.exports = {
 	name: 'ready',
@@ -10,6 +11,8 @@ module.exports = {
 			`${client.user.tag} (${client.user.id}) has started`,
 			'',
 		].join('\n----------\n'));
+
+		loadLanguages(client);
 
 		const activities = [
 			`with version ${version}`,

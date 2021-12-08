@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { supabase } = require('../supabase');
 const { Permissions } = require('discord.js');
 const { noPermissionText } = require('../../config');
+const { language } = require('../languages');
 
 const crosspostUpsert = async (channel, state) => {
 	const { data } = await supabase
@@ -28,10 +29,10 @@ module.exports = {
 
 		if (channel.type == 'GUILD_NEWS') {
 			crosspostUpsert(channel, state);
-			return await interaction.reply({ content: `Automatically crossposting messages for <#${channel.id}> is now set to: \`${state}\``, ephemeral: true });
+			return await interaction.reply({ content: `${language(interaction.guild, 'CROSSPOST_SUCCESS_1')} <#${channel.id}> ${language(interaction.guild, 'CROSSPOST_SUCCESS_2')} \`${state}\``, ephemeral: true });
 		}
 		else {
-			return await interaction.reply({ content: 'The channel must be a news channel!', ephemeral: true });
+			return await interaction.reply({ content: language(interaction.guild, 'CROSSPOST_NOT_NEWS'), ephemeral: true });
 		}
 	},
 };

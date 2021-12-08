@@ -1,0 +1,69 @@
+{
+    "languages": ["en", "de"],
+    "translations": {
+        "CROSSPOST_SUCCESS_1": {
+            "en": "Automatically crossposting messages for",
+            "de": "Automatisches crossposting von Nachrichten für"
+        },
+        "CROSSPOST_SUCCESS_2": {
+            "en": "is now set to:",
+            "de": "ist nun gesetzt auf:"
+        },
+        "CROSSPOST_NOT_NEWS": {
+            "en": "The channel must be a news channel!",
+            "de": "Der Kanal muss ein Neuigkeiten Kanal sein!"
+        },
+        "VOTE_TITLE": {
+            "en": "Vote for me!",
+            "de": "Vote für mich!"
+        },
+        "VOTE_MSG": {
+            "en": "You can click the button below to vote for me.",
+            "de": "Du kannst den Button unten drücken um für mich zu voten."
+        },
+        "FOR": {
+            "en": "for",
+            "de": "für"
+        },
+        "NONE": {
+            "en": "None",
+            "de": "Keine"
+        },
+        "TIME_CREATED": {
+            "en": "Time Created",
+            "de": "Erstellt am"
+        },
+        "DEV_TITLE": {
+            "en": "Developer",
+            "de": "Entwickler"
+        },
+        "IS_DEV": {
+            "en": "is my Developer",
+            "de": "ist mein Entwickler"
+        },
+        "IS_SENSEI": {
+            "en": "is my Sensei",
+            "de": "ist mein Sensei"
+        },
+        "DONATOR_TITLE": {
+            "en": "Donator",
+            "de": "Spender"
+        },
+        "IS_DONATOR": {
+            "en": "donated to <@751092600890458203>",
+            "de": "an <@751092600890458203> gespendet"
+        },
+        "MORE_THAN_100": {
+            "en": "You cannot delete more than 100 messages at a time!",
+            "de": "Du kannst nicht mehr als 100 Nachrichten auf einmal löschen!"
+        },
+        "CLEARED_FROM_USER": {
+            "en": "Cleared ${(messages.size = 0) ? 1 : messages.size} message(s) from ${target}!",
+            "de": "${(messages.size = 0) ? 1 : messages.size} Nachricht(en) von ${target} gelöscht!"
+        },
+        "CLEARED_NORMAL": {
+            "en": "Cleared ${(messages.size = 0) ? 1 : messages.size} message(s) from this channel!",
+            "de": "$({messages.size = 0) ? 1 : messages.size} Nachricht(en) wurden von diesem Kanal gelöscht!"
+        }
+    }
+}
