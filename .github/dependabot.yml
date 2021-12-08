@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "build(dependencies)"
+      prefix: "build(deps)"
     labels:
       - "dependencies"
     reviewers:
