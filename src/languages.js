@@ -12,7 +12,7 @@ const loadLanguages = async (client) => {
 			.select('language')
 			.eq('guild_id', `${guildId}`);
 
-		guildLanguages[guildId] = data ? data.language : 'en';
+		guildLanguages[guildId] = data[0].language ? data[0].language : 'en';
 	}
 };
 
