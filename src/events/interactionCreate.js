@@ -1,6 +1,7 @@
 const client = require('../index');
 const { MessageEmbed, MessageAttachment, Permissions } = require('discord.js');
 const { noBotPermissionText } = require('../../config');
+const { language } = require('../languages');
 require('dotenv').config();
 
 async function errorFunction(interaction, error) {
@@ -53,7 +54,7 @@ module.exports = {
 							.catch(e => errorFunction(interaction, e));
 					}
 
-					interaction.reply({ content: 'Your Roles got updated!', ephemeral: true });
+					interaction.reply({ content: language(interaction.guild, 'ROLES_UPDATED'), ephemeral: true });
 				}
 			}
 

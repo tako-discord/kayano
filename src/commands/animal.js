@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { defaultColor } = require('../../config');
+const { language } = require('../languages');
 const fetch = require('node-fetch');
 
 module.exports = {
@@ -30,9 +31,9 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://nature.png')
-			.setDescription(`:${((animal == 'panda' ? 'panda_face' : animalEmoji))}: Here is a random image and fact of a ${animal}`)
-			.addField('Fact:', data.fact)
-			.addField('Image:', '\u200b')
+			.setDescription(`:${((animal == 'panda' ? 'panda_face' : animalEmoji))}: ${language(interaction.guild, 'RANDOM_IMAGE_FACT') + language(interaction.guild, `${animalOption.toUpperCase()}`)}:`)
+			.addField(language(interaction.guild, 'FACT'), data.fact)
+			.addField(language(interaction.guild, 'IMAGE'), '\u200b')
 			.setImage(data.image)
 			.setTimestamp();
 

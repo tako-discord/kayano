@@ -64,6 +64,62 @@
         "CLEARED_NORMAL": {
             "en": "Cleared ${(messages.size = 0) ? 1 : messages.size} message(s) from this channel!",
             "de": "$({messages.size = 0) ? 1 : messages.size} Nachricht(en) wurden von diesem Kanal gelöscht!"
+        },
+        "ROLES_UPDATED": {
+            "en": "Your Roles got updated!",
+            "de": "Deine Rollen wurden aktualisiert!"
+        },
+        "RANDOM_IMAGE_FACT": {
+            "en": "Here is a random image and a random fact of ",
+            "de": "Hier ist ein zufälliges Bild und ein zufälliger Fakt von "
+        },
+        "DOG": {
+            "en": "a dog",
+            "de": "einem Hund"
+        },
+        "CAT": {
+            "en": "a cat",
+            "de": "einer Katze"
+        },
+        "PANDA": {
+            "en": "a panda",
+            "de": "einem Panda"
+        },
+        "FOX": {
+            "en": "a fox",
+            "de": "einem Fuchs"
+        },
+        "RED_PANDA": {
+            "en": "a red panda",
+            "de": "einem roten Panda"
+        },
+        "KOALA": {
+            "en": "a koala",
+            "de": "einem Koala"
+        },
+        "BIRD": {
+            "en": "a bird",
+            "de": "einem Vogel"
+        },
+        "RACCOON": {
+            "en": "a raccoon",
+            "de": "einem Waschbär"
+        },
+        "KANGAROO": {
+            "en": "a kangaroo",
+            "de": "einem Känguru"
+        },
+        "FACT": {
+            "en": "Fact",
+            "de": "Fakt"
+        },
+        "IMAGE": {
+            "en": "Image",
+            "de": "Bild"
+        },
+        "AVATAR_NOTE": {
+            "en": "Note:\nThe GIF link leads to a `webp` image if the avatar is not animated!",
+            "de": "Merke dir:\nDer GIF Link führt dich zu einem `webp` Bild wenn der Avatar nicht animiert ist!"
         }
     }
 }
