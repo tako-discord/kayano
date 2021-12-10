@@ -40,6 +40,7 @@
     "all-contributors-cli": "^6.20.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.4.1",
+    "nodemon": "^2.0.15",
     "standard-version": "^9.3.2"
   },
   "config": {
