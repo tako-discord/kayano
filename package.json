@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
+    "dev": "nodemon .",
     "registerCommands": "node ./src/deploy-commands",
     "lint": "eslint .",
     "helper": "node ./helper.js",
