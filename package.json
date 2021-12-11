@@ -36,6 +36,7 @@
     "ms": "^2.1.3",
     "node-fetch": "^2.6.6",
     "os": "^0.1.2",
+    "topgg-autoposter": "^2.0.1",
     "uwuifier": "^4.0.4"
   },
   "devDependencies": {

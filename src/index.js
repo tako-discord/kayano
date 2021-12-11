@@ -1,4 +1,5 @@
 const { Client, Collection, Intents } = require('discord.js');
+const { AutoPoster } = require('topgg-autoposter');
 const fs = require('fs');
 const express = require('express');
 require('dotenv').config();
@@ -39,3 +40,7 @@ const server = express();
 server.all('/', (req, res) => {res.send('The bot is up & running!');});
 server.listen(process.env.PORT, () => {console.log(`\n----------\nServer started at: http://localhost:${process.env.PORT}\n----------`);});
 client.login(process.env.TOKEN);
+const poster = AutoPoster(process.env.TOPGG_TOKEN, client);
+poster.on('posted', (stats) => {
+	console.log(`Posted stats to Top.gg | ${stats.serverCount} servers`);
+});
