@@ -1,14 +1,14 @@
 const { version } = require('../../package.json');
 const { loadLanguages } = require('../languages');
+const moment = require('moment');
 
 module.exports = {
 	name: 'ready',
 	once: 'true',
 	execute(client) {
 		console.log([
-			'',
 			'Starting...',
-			`${client.user.tag} (${client.user.id}) has started`,
+			`${client.user.tag} (${client.user.id}) has started (at ${moment().format('YYYY-MM-DD HH:mm:ss')})`,
 			'',
 		].join('\n----------\n'));
 

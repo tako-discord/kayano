@@ -1,5 +1,6 @@
 const { Client, Collection, Intents } = require('discord.js');
 const fs = require('fs');
+const express = require('express');
 require('dotenv').config();
 
 const client = new Client({ intents: [
@@ -34,4 +35,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
+const server = express();
+server.all('/', (req, res) => {res.send('The bot is up & running!');});
+server.listen(process.env.PORT, () => {console.log(`\n----------\nServer started at: http://localhost:${process.env.PORT}\n----------`);});
 client.login(process.env.TOKEN);
