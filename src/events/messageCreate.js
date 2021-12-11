@@ -14,7 +14,7 @@ module.exports = {
 			}
 
 			if (data[0].crosspost == true) {
-				message.crosspost().catch(e => console.error(e));
+				message.crosspost().catch();
 			}
 		}
 	},
