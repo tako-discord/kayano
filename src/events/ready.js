@@ -1,5 +1,7 @@
 const { version } = require('../../package.json');
 const { loadLanguages } = require('../languages');
+const { AutoPoster } = require('topgg-autoposter');
+const express = require('express');
 const moment = require('moment');
 
 module.exports = {
@@ -7,12 +9,19 @@ module.exports = {
 	once: 'true',
 	execute(client) {
 		console.log([
-			'Starting...',
-			`${client.user.tag} (${client.user.id}) has started (at ${moment().format('YYYY-MM-DD HH:mm:ss')})`,
-			'',
-		].join('\n----------\n'));
+			'----------\nStarting...\n',
+			`----------\n${client.user.tag} (${client.user.id}) has started (at ${moment().format('YYYY-MM-DD HH:mm:ss')})`,
+		].join(''));
 
 		loadLanguages(client);
+		const server = express();
+		server.all('/kayano-uptime', (req, res) => {res.send('The bot is up & running!');});
+		server.listen(process.env.PORT ? process.env.PORT : 5151, () => {console.log(`----------\nServer started at: http://localhost:${process.env.PORT ? process.env.PORT : 5151}`);});
+
+		if (process.env.TOPGG_TOKEN) {
+			AutoPoster(process.env.TOPGG_TOKEN, client);
+			console.log('----------\nStarted top.gg autoposter');
+		}
 
 		const activities = [
 			`with version ${version}`,
