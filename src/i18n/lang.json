@@ -120,6 +120,14 @@
         "AVATAR_NOTE": {
             "en": "Note:\nThe GIF link leads to a `webp` image if the avatar is not animated!",
             "de": "Merke dir:\nDer GIF Link führt dich zu einem `webp` Bild wenn der Avatar nicht animiert ist!"
+        },
+        "LOCKED": {
+            "en": "is now locked",
+            "de": "ist nun gesperrt"
+        },
+        "UNLOCKED": {
+            "en": "is now unlocked",
+            "de": "ist nun entsperrt"
         }
     }
 }
