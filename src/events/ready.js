@@ -26,16 +26,6 @@ module.exports = {
 			console.log('----------\nStarted top.gg autoposter');
 		}
 
-		if (process.env.TOPGG_TOKEN) {
-			const poster = AutoPoster(process.env.TOPGG_TOKEN, client);
-			poster.on('posted', (stats) => {
-				console.log(`Posted stats to Top.gg | ${stats.serverCount} servers (at ${moment().format('YYYY-MM-DD HH:mm:ss')})\n----------`);
-			});
-			poster.on('error', (err) => {
-				console.log(`Error posting stats to Top.gg | ${err} (at ${moment().format('YYYY-MM-DD HH:mm:ss')})\n----------`);
-			});
-		}
-
 		const activities = [
 			`with version ${version}`,
 			`on ${client.guilds.cache.size} servers`,
