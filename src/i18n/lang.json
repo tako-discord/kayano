@@ -23,7 +23,7 @@
         "VOTE_MSG": {
             "en": "You can click the button below to vote for me.",
             "de": "Du kannst den Button unten drücken um für mich zu voten.",
-            "hr": "Mozes kliknuti gumb ispod kako bi glasao za mene."
+            "hr": "Možes kliknuti gumb ispod kako bi glasao za mene."
         },
         "FOR": {
             "en": "for",
@@ -68,7 +68,7 @@
         "MORE_THAN_100": {
             "en": "You cannot delete more than 100 messages at a time!",
             "de": "Du kannst nicht mehr als 100 Nachrichten auf einmal löschen!",
-            "hr": "Ne mozes izbrisati vise od 100 poruka od jednom!"
+            "hr": "Ne možes izbrisati više od 100 poruka od jednom!"
         },
         "CLEARED_FROM_USER": {
             "en": "Cleared ${(messages.size = 0) ? 1 : messages.size} message(s) from ${target}!",
@@ -83,7 +83,7 @@
         "ROLES_UPDATED": {
             "en": "Your Roles got updated!",
             "de": "Deine Rollen wurden aktualisiert!",
-            "hr": "Tvoje uloge su se azurirale!"
+            "hr": "Tvoje uloge su ažurirane!"
         },
         "RANDOM_IMAGE_FACT": {
             "en": "Here is a random image and a random fact of ",
@@ -98,7 +98,7 @@
         "CAT": {
             "en": "a cat",
             "de": "einer Katze",
-            "hr": "macki"
+            "hr": "mački"
         },
         "PANDA": {
             "en": "a panda",
@@ -153,12 +153,12 @@
         "LOCKED": {
             "en": "is now locked",
             "de": "ist nun gesperrt",
-            "hr": "je sada zakljucan"
+            "hr": "je sada zaključan"
         },
         "UNLOCKED": {
             "en": "is now unlocked",
             "de": "ist nun entsperrt",
-            "hr": "je sada otkljucan"
+            "hr": "je sada otključan"
         }
     }
 }
