@@ -1,5 +1,5 @@
 {
-    "languages": ["en", "de"],
+    "languages": ["en", "de", "hr"],
     "translations": {
         "CROSSPOST_SUCCESS_1": {
             "en": "Automatically crossposting messages for",
