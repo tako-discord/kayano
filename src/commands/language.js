@@ -10,7 +10,8 @@ module.exports = {
 		.setDescription('Changes the language of the bot in the guild the command got executed from')
 		.addStringOption(option => option.setName('language').setDescription('The language I should be speaking in this guild').setRequired(true)
 			.addChoice('English', 'en')
-			.addChoice('Deutsch (German)', 'de')),
+			.addChoice('Deutsch (German)', 'de')
+			.addChoice('Hrvatski (Croatian)', 'hr')),
 	async execute(interaction) {
 		if (!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_GUILD)) {
 			return await interaction.reply({ content: noPermissionText, ephemeral: true });

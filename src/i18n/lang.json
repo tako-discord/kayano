@@ -7,127 +7,158 @@
         },
         "CROSSPOST_SUCCESS_2": {
             "en": "is now set to:",
-            "de": "ist nun gesetzt auf:"
+            "de": "ist nun gesetzt auf:",
+            "hr": "je sad postaljeno na:"
         },
         "CROSSPOST_NOT_NEWS": {
             "en": "The channel must be a news channel!",
-            "de": "Der Kanal muss ein Neuigkeiten Kanal sein!"
+            "de": "Der Kanal muss ein Neuigkeiten Kanal sein!",
+            "hr": "Kanal mora biti novinski kanal"
         },
         "VOTE_TITLE": {
             "en": "Vote for me!",
-            "de": "Vote für mich!"
+            "de": "Vote für mich!",
+            "hr": "Glasaj za mene!"
         },
         "VOTE_MSG": {
             "en": "You can click the button below to vote for me.",
-            "de": "Du kannst den Button unten drücken um für mich zu voten."
+            "de": "Du kannst den Button unten drücken um für mich zu voten.",
+            "hr": "Mozes kliknuti gumb ispod kako bi glasao za mene."
         },
         "FOR": {
             "en": "for",
-            "de": "für"
+            "de": "für",
+            "hr": "za"
         },
         "NONE": {
             "en": "None",
-            "de": "Keine"
+            "de": "Keine",
+            "hr": "nijedan"
         },
         "TIME_CREATED": {
             "en": "Time Created",
-            "de": "Erstellt am"
+            "de": "Erstellt am",
+            "hr": "Vrijeme kreirano"
         },
         "DEV_TITLE": {
             "en": "Developer",
-            "de": "Entwickler"
+            "de": "Entwickler",
+            "hr": "Programer"
         },
         "IS_DEV": {
             "en": "is my Developer",
-            "de": "ist mein Entwickler"
+            "de": "ist mein Entwickler",
+            "hr": "je moj programer"
         },
         "IS_SENSEI": {
             "en": "is my Sensei",
-            "de": "ist mein Sensei"
+            "de": "ist mein Sensei",
+            "hr": "je moj Sensei"
         },
         "DONATOR_TITLE": {
             "en": "Donator",
-            "de": "Spender"
+            "de": "Spender",
+            "hr": "Donator"
         },
         "IS_DONATOR": {
             "en": "donated to <@751092600890458203>",
-            "de": "an <@751092600890458203> gespendet"
+            "de": "an <@751092600890458203> gespendet",
+            "hr": "donirao <@751092600890458203>"
         },
         "MORE_THAN_100": {
             "en": "You cannot delete more than 100 messages at a time!",
-            "de": "Du kannst nicht mehr als 100 Nachrichten auf einmal löschen!"
+            "de": "Du kannst nicht mehr als 100 Nachrichten auf einmal löschen!",
+            "hr": "Ne mozes izbrisati vise od 100 poruka od jednom!"
         },
         "CLEARED_FROM_USER": {
             "en": "Cleared ${(messages.size = 0) ? 1 : messages.size} message(s) from ${target}!",
-            "de": "${(messages.size = 0) ? 1 : messages.size} Nachricht(en) von ${target} gelöscht!"
+            "de": "${(messages.size = 0) ? 1 : messages.size} Nachricht(en) von ${target} gelöscht!",
+            "hr": "Izbrisala sam ${(messages.size = 0) ? 1 : messages.size} poruku(a) od ${target}!"
         },
         "CLEARED_NORMAL": {
             "en": "Cleared ${(messages.size = 0) ? 1 : messages.size} message(s) from this channel!",
-            "de": "$({messages.size = 0) ? 1 : messages.size} Nachricht(en) wurden von diesem Kanal gelöscht!"
+            "de": "$({messages.size = 0) ? 1 : messages.size} Nachricht(en) wurden von diesem Kanal gelöscht!",
+            "hr": "Izbrisala sam ${(messages.size = 0) ? 1 : messages.size} message(s) iz ovog kanala!"
         },
         "ROLES_UPDATED": {
             "en": "Your Roles got updated!",
-            "de": "Deine Rollen wurden aktualisiert!"
+            "de": "Deine Rollen wurden aktualisiert!",
+            "hr": "Tvoje uloge su se azurirale!"
         },
         "RANDOM_IMAGE_FACT": {
             "en": "Here is a random image and a random fact of ",
-            "de": "Hier ist ein zufälliges Bild und ein zufälliger Fakt von "
+            "de": "Hier ist ein zufälliges Bild und ein zufälliger Fakt von ",
+            "hr": "Ovo je slučajna slika i slučajna činjenica o "
         },
         "DOG": {
             "en": "a dog",
-            "de": "einem Hund"
+            "de": "einem Hund",
+            "hr": "psu"
         },
         "CAT": {
             "en": "a cat",
-            "de": "einer Katze"
+            "de": "einer Katze",
+            "hr": "macki"
         },
         "PANDA": {
             "en": "a panda",
-            "de": "einem Panda"
+            "de": "einem Panda",
+            "hr": "pandi"
         },
         "FOX": {
             "en": "a fox",
-            "de": "einem Fuchs"
+            "de": "einem Fuchs",
+            "hr": "lisici"
         },
         "RED_PANDA": {
             "en": "a red panda",
-            "de": "einem roten Panda"
+            "de": "einem roten Panda",
+            "hr": "crvenoj pandi"
         },
         "KOALA": {
             "en": "a koala",
-            "de": "einem Koala"
+            "de": "einem Koala",
+            "hr": "koali"
         },
         "BIRD": {
             "en": "a bird",
-            "de": "einem Vogel"
+            "de": "einem Vogel",
+            "hr": "ptici"
         },
         "RACCOON": {
             "en": "a raccoon",
-            "de": "einem Waschbär"
+            "de": "einem Waschbär",
+            "hr": "rakunu"
         },
         "KANGAROO": {
             "en": "a kangaroo",
-            "de": "einem Känguru"
+            "de": "einem Känguru",
+            "hr": "klokanu"
         },
         "FACT": {
             "en": "Fact",
-            "de": "Fakt"
+            "de": "Fakt",
+            "hr": "Činjenica",
         },
         "IMAGE": {
             "en": "Image",
-            "de": "Bild"
+            "de": "Bild",
+            "hr": "Slika"
         },
         "AVATAR_NOTE": {
             "en": "Note:\nThe GIF link leads to a `webp` image if the avatar is not animated!",
-            "de": "Merke dir:\nDer GIF Link führt dich zu einem `webp` Bild wenn der Avatar nicht animiert ist!"
+            "de": "Merke dir:\nDer GIF Link führt dich zu einem `webp` Bild wenn der Avatar nicht animiert ist!",
+            "hr": "Napomena:\nGIF veza vodi do `webp` slike ako avatar nije animiran!"
         },
         "LOCKED": {
             "en": "is now locked",
-            "de": "ist nun gesperrt"
+            "de": "ist nun gesperrt",
+            "hr": "je sada zakljucan"
         },
         "UNLOCKED": {
             "en": "is now unlocked",
-            "de": "ist nun entsperrt"
+            "de": "ist nun entsperrt",
+            "hr": "je sada otkljucan"
         }
     }
 }
