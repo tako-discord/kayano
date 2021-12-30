@@ -67,6 +67,17 @@
   dependencies:
     chalk "^4.0.0"
 
+"@discordjs/builders@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-0.11.0.tgz#4102abe3e0cd093501f3f71931df43eb92f5b0cc"
+  integrity sha512-ZTB8yJdJKrKlq44dpWkNUrAtEJEq0gqpb7ASdv4vmq6/mZal5kOv312hQ56I/vxwMre+VIkoHquNUAfnTbiYtg==
+  dependencies:
+    "@sindresorhus/is" "^4.2.0"
+    discord-api-types "^0.26.0"
+    ts-mixer "^6.0.0"
+    tslib "^2.3.1"
+    zod "^3.11.6"
+
 "@discordjs/builders@^0.8.1":
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-0.8.2.tgz#c3ef99caa9ebe70a4196b987011d90136c71054a"
@@ -77,17 +88,6 @@
     ow "^0.27.0"
     ts-mixer "^6.0.0"
     tslib "^2.3.1"
-
-"@discordjs/builders@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-0.9.0.tgz#1ca17677e7c180d4f266191596e17e9633180417"
-  integrity sha512-XM/5yrTxMF0SDKza32YzGDQO1t+qEJTaF8Zvxu/UOjzoqzMPPGQBjC1VgZxz8/CBLygW5qI+UVygMa88z13G3g==
-  dependencies:
-    "@sindresorhus/is" "^4.2.0"
-    discord-api-types "^0.24.0"
-    ts-mixer "^6.0.0"
-    tslib "^2.3.1"
-    zod "^3.11.6"
 
 "@discordjs/collection@^0.3.2":
   version "0.3.2"
@@ -1179,6 +1179,11 @@ discord-api-types@^0.25.2:
   version "0.25.2"
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.25.2.tgz#e50ed152e6d48fe7963f5de1002ca6f2df57c61b"
   integrity sha512-O243LXxb5gLLxubu5zgoppYQuolapGVWPw3ll0acN0+O8TnPUE2kFp9Bt3sTRYodw8xFIknOVxjSeyWYBpVcEQ==
+
+discord-api-types@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.26.0.tgz#0134c6ee919035f2075ac1af9cdc0898b8dae71d"
+  integrity sha512-bnUltSHpQLzTVZTMjm+iNgVhAbtm5oAKHrhtiPaZoxprbm1UtuCZCsG0yXM61NamWfeSz7xnLvgFc50YzVJ5cQ==
 
 discord-rpc@^4.0.1:
   version "4.0.1"
