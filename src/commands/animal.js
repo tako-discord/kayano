@@ -31,7 +31,7 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://nature.png')
-			.setDescription(`:${((animal == 'panda' ? 'panda_face' : animalEmoji))}: ${language(interaction.guild, 'RANDOM_IMAGE_FACT') + language(interaction.guild, `${animalOption.toUpperCase()}`)}:`)
+			.setDescription(`:${((animal == 'panda' ? 'panda_face' : animalEmoji))}: Here is a random image and fact of a ${animalOption}:`)
 			.addField(language(interaction.guild, 'FACT'), data.fact)
 			.addField(language(interaction.guild, 'IMAGE'), '\u200b')
 			.setImage(data.image)

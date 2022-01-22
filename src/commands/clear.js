@@ -16,7 +16,7 @@ module.exports = {
 			const channel = interaction.channel;
 
 			if (amount > 100) {
-				return await interaction.reply({ content: language(interaction.guild, 'MORE_THAN_100'), ephemeral: true });
+				return await interaction.reply({ content: 'You cannot delete more than 100 messages at a time!', ephemeral: true });
 			}
 
 			if (target) {
@@ -30,23 +30,16 @@ module.exports = {
 					}
 				});
 
-
-				// eslint-disable-next-line no-unused-vars
 				await channel.bulkDelete(filtered, true).then(messages => {
-					const msg = eval('`' + language(interaction.guild, 'CLEARED_FROM_USER') + '`');
-
-					interaction.reply({ content: '🧹' + msg });
+					interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from ${target.tag} in <#${channel.id}>`});
 					setTimeout(function() {
 						interaction.deleteReply();
 					}, 5000);
 				});
 			}
 			else {
-				// eslint-disable-next-line no-unused-vars
 				await channel.bulkDelete(amount, true).then(messages => {
-					const msg = eval('`' + language(interaction.guild, 'CLEARED_NORMAL') + '`');
-
-					interaction.reply({ content: '🧹' + msg });
+					interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) in <#${channel.id}>` });
 					setTimeout(function() {
 						interaction.deleteReply();
 					}, 5000);

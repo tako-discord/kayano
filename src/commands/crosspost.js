@@ -29,10 +29,10 @@ module.exports = {
 
 		if (channel.type == 'GUILD_NEWS') {
 			crosspostUpsert(channel, state);
-			return await interaction.reply({ content: `${language(interaction.guild, 'CROSSPOST_SUCCESS_1')} <#${channel.id}> ${language(interaction.guild, 'CROSSPOST_SUCCESS_2')} \`${state}\``, ephemeral: true });
+			return await interaction.reply({ content: `Automatic crossposting for <#${channel.id}> is now set to: \`${state}\``, ephemeral: true });
 		}
 		else {
-			return await interaction.reply({ content: language(interaction.guild, 'CROSSPOST_NOT_NEWS'), ephemeral: true });
+			return await interaction.reply({ content: 'You must provide a valid news channel!', ephemeral: true });
 		}
 	},
 };

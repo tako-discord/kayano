@@ -1,5 +1,4 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { language } = require('../languages');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -11,7 +10,7 @@ module.exports = {
 
 		if (channel.type == 'GUILD_TEXT') {
 			await channel.permissionOverwrites.create(interaction.guild.id, { 'SEND_MESSAGES': false }, { reason: `Locked by ${interaction.user.tag}`, type: 0 });
-			await interaction.reply({ content: `<#${channel.id}> ${language(interaction.guild, 'LOCKED')}` });
+			await interaction.reply({ content: `**<#${channel.id}> is now locked!**` });
 		}
 	},
 };

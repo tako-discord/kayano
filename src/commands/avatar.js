@@ -14,9 +14,9 @@ module.exports = {
 
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
-			.setTitle(`Avatar ${language(interaction.guild, 'FOR')} **${user.tag}**`)
+			.setTitle(`Avatar for **${user.tag}**`)
 			.setThumbnail('attachment://emoji.png')
-			.setDescription(`[PNG](${user.avatarURL({ format: 'png', size: 512 })}) | [JPG](${user.avatarURL({ format: 'jpg', size: 512 })}) | [GIF](${user.avatarURL({ dynamic: true, size: 512 })})\n\n${language(interaction.guild, 'AVATAR_NOTE')}`)
+			.setDescription(`[PNG](${user.avatarURL({ format: 'png', size: 512 })}) | [JPG](${user.avatarURL({ format: 'jpg', size: 512 })}) | [GIF](${user.avatarURL({ dynamic: true, size: 512 })})\n\nPlease note that the GIF link leads you to a webq image if the Avatar is not animated.`)
 			.setImage(user.avatarURL({ dynamic: true, size: 512 }));
 
 		await interaction.reply({ embeds: [embed], files: [image] });

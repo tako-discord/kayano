@@ -1,7 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageAttachment, MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const { defaultColor, voteLink } = require('../../config');
-const { language } = require('../languages');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -13,8 +12,8 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://vote.png')
-			.setTitle(`${language(interaction.guild, 'VOTE_TITLE')}`)
-			.setDescription(`${language(interaction.guild, 'VOTE_MSG')}`);
+			.setTitle(`Vote for me!`)
+			.setDescription(`You can click the button below to vote for me.`);
 
 		const row = new MessageActionRow()
 			.addComponents(
