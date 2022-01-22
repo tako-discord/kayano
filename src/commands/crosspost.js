@@ -2,7 +2,6 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { supabase } = require('../supabase');
 const { Permissions } = require('discord.js');
 const { noPermissionText } = require('../../config');
-const { language } = require('../languages');
 
 const crosspostUpsert = async (channel, state) => {
 	const { data } = await supabase

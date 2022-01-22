@@ -7,18 +7,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **autoposter, express:** move to ready event ([b11aa3d](https://github.com/kayano-bot/kayano/commit/b11aa3d3c1c46a69d7c7ba9cf79e42d71215d29e))
 * **commands:** add horny command ([05a9e8d](https://github.com/kayano-bot/kayano/commit/05a9e8d6e324d9cf03ea6cda8401ee87028babbf))
 * **commands:** add trigger command ([76bf994](https://github.com/kayano-bot/kayano/commit/76bf9944deff37d5ce019b896653fb3492bc9391))
 * **commands:** added activity ([bf49c83](https://github.com/kayano-bot/kayano/commit/bf49c837669043e3bff14d57ec3ca997a385e3d1))
 * **commands:** added lock & unlock ([857ac0e](https://github.com/kayano-bot/kayano/commit/857ac0e6d2e5fb87245bd72d32d50131fceacd7d))
-* **express, top.gg-autoposter:** moving to ready event ([19ce142](https://github.com/kayano-bot/kayano/commit/19ce1424caa43e305f951f683ded5e334bd32cc8))
 * **express:** deploy express server on start for uptime stuff ([64c78dc](https://github.com/kayano-bot/kayano/commit/64c78dc786a56f3621ac600387661d8b9a04f679))
-* **i18n:** 🇭🇷 Add Croatian Translation! ([8c7703f](https://github.com/kayano-bot/kayano/commit/8c7703f26de243aa784762f11ba0fc82e4c31f0b))
-* **i18n:** added special characters and some fixes ([97264f6](https://github.com/kayano-bot/kayano/commit/97264f60e50da2191c4ccd630c2cbfbb3fae80be)), closes [#39](https://github.com/kayano-bot/kayano/issues/39)
-* **i18n:** added translations for: animal, avatar, reactionrole updates ([caad726](https://github.com/kayano-bot/kayano/commit/caad7265e8850f1cbeb119e12de0320a6d452d6f))
-* **i18n:** i18n ([2c30676](https://github.com/kayano-bot/kayano/commit/2c306763595f1ccf7a071f4b43e6362e12f94738))
-* **topgg-autoposter:** remove logging ([692878f](https://github.com/kayano-bot/kayano/commit/692878f4ba5c4b06b3520b9d04a6b3b490690fa3))
 * **topgg:** auto post stats ([2bd24fb](https://github.com/kayano-bot/kayano/commit/2bd24fb04279b3a74e228e1cf452776caa64c942))
 
 
@@ -26,9 +19,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **crosspost:** remove logging for errors ([25c1b87](https://github.com/kayano-bot/kayano/commit/25c1b87b597f89d494e80540cb3b93cef3af64de))
 * **depedabot:** shorten commit prefix ([8eeb67e](https://github.com/kayano-bot/kayano/commit/8eeb67eed0d2f1fac961fee9d59696c6049e4de5))
-* **i18n > supabase:** fixing language not using data from the database ([632f221](https://github.com/kayano-bot/kayano/commit/632f2217e1c2ccae6eca378f85de106cf87002fd))
-* **i18n:** fixed crashing because of the data being null ([1979ac6](https://github.com/kayano-bot/kayano/commit/1979ac6714acb199fc894b7438497b9947baf883))
-* **i18n:** hr missing in the languages field ([2595ee7](https://github.com/kayano-bot/kayano/commit/2595ee76efc213e2889f8a725c8fec8c9ed5a564))
 
 ### [1.9.4-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.3-alpha...v1.9.4-alpha) (2021-12-07)
 

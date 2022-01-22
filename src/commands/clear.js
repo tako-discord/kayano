@@ -1,7 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { Permissions } = require('discord.js');
 const { noPermissionText } = require('../../config');
-const { language } = require('../languages');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -31,7 +30,7 @@ module.exports = {
 				});
 
 				await channel.bulkDelete(filtered, true).then(messages => {
-					interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from ${target.tag} in <#${channel.id}>`});
+					interaction.reply({ content: `🧹 Cleared ${messages.size} message(s) from ${target.tag} in <#${channel.id}>` });
 					setTimeout(function() {
 						interaction.deleteReply();
 					}, 5000);

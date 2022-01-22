@@ -1,7 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { defaultColor } = require('../../config');
-const { language } = require('../languages');
 
 module.exports = {
 	data: new SlashCommandBuilder()
