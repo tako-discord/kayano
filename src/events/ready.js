@@ -1,5 +1,4 @@
 const { version } = require('../../package.json');
-const { loadLanguages } = require('../languages');
 const { AutoPoster } = require('topgg-autoposter');
 const express = require('express');
 const moment = require('moment');
@@ -8,18 +7,14 @@ module.exports = {
 	name: 'ready',
 	once: 'true',
 	execute(client) {
-		const server = express();
-		server.all('/', (req, res) => {res.send('The bot is up & running!');});
-		server.listen(process.env.PORT, () => {console.log(`Server started at: http://localhost:${process.env.PORT} (at ${moment().format('YYYY-MM-DD HH:mm:ss')})\n----------`);});
-
 		console.log([
 			'----------\nStarting...\n',
 			`----------\n${client.user.tag} (${client.user.id}) has started (at ${moment().format('YYYY-MM-DD HH:mm:ss')})`,
 		].join(''));
 
-		loadLanguages(client);
-		server.all('/kayano-uptime', (req, res) => {res.send('The bot is up & running!');});
-		server.listen(process.env.PORT ? process.env.PORT : 5151, () => {console.log(`----------\nServer started at: http://localhost:${process.env.PORT ? process.env.PORT : 5151}`);});
+		const server = express();
+		server.all('/kayano-healthcheck', (req, res) => {res.send('The bot is up & running!');});
+		server.listen(process.env.PORT ? process.env.PORT : 5151, () => {console.log(`----------\nServer started at port: ${process.env.PORT ? process.env.PORT : 5151} (at ${moment().format('YYYY-MM-DD HH:mm:ss')})`);});
 
 		if (process.env.TOPGG_TOKEN) {
 			AutoPoster(process.env.TOPGG_TOKEN, client);
