@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0-alpha.1](https://github.com/kayano-bot/kayano/compare/v1.10.0-alpha...v1.10.0-alpha.1) (2022-01-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* **release:** New env var (optional): Port
+
+### Bug Fixes
+
+* **language:** completly removed now ([a7435c7](https://github.com/kayano-bot/kayano/commit/a7435c7790c58dde286cb14c6a09b56ea3cd8e72))
+
+
+* **release:** v1.10.0-alpha ([dec0bc1](https://github.com/kayano-bot/kayano/commit/dec0bc1f5597edc9de3c64ba7565234583fad939))
+
 ## [1.10.0-alpha](https://github.com/kayano-bot/kayano/compare/v1.9.4-alpha...v1.10.0-alpha) (2022-01-22)
 
 
