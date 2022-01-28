@@ -12,8 +12,8 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://vote.png')
-			.setTitle(`Vote for me!`)
-			.setDescription(`You can click the button below to vote for me.`);
+			.setTitle('Vote for me!')
+			.setDescription('You can click the button below to vote for me.');
 
 		const row = new MessageActionRow()
 			.addComponents(

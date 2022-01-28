@@ -13,8 +13,13 @@ module.exports = {
 				return;
 			}
 
-			if (data[0].crosspost == true) {
-				message.crosspost().catch();
+			if (data[0].crosspost == true && message.content != 'I ran into an error while trying to send your message! Please try to publish the message manually.') {
+				try {
+					message.crosspost();
+				}
+				catch {
+					message.channel.send('I ran into an error while trying to send your message! Please try to publish the message manually.');
+				}
 			}
 		}
 	},
