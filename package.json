@@ -25,7 +25,7 @@
     "@supabase/supabase-js": "^1.28.5",
     "colors": "^1.4.0",
     "commitizen": "^4.2.4",
-    "discord-api-types": "^0.25.2",
+    "discord-api-types": "^0.26.1",
     "discord-rpc": "^4.0.1",
     "discord.js": "^13.6.0",
     "dotenv": "^10.0.0",
