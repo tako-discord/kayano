@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@discordjs/builders": "^0.9.0",
-    "@discordjs/rest": "^0.3.0-dev.1644235835.b936103",
+    "@discordjs/rest": "^0.4.0-dev.1645056356.dee27db",
     "@supabase/supabase-js": "^1.28.5",
     "colors": "^1.4.0",
     "commitizen": "^4.2.4",
