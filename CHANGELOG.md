@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.0-alpha.1...v1.10.1-alpha) (2022-02-19)
+
+
+### Bug Fixes
+
+* **crosspost:** adding error message if something went wrong ([f9bdac6](https://github.com/kayano-bot/kayano/commit/f9bdac691f8bce232d4def764d3653de329fe88a))
+
 ## [1.10.0-alpha.1](https://github.com/kayano-bot/kayano/compare/v1.10.0-alpha...v1.10.0-alpha.1) (2022-01-24)
 
 
