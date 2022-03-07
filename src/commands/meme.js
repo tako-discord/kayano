@@ -18,7 +18,7 @@ module.exports = {
 			.setTitle(data.title)
 			.setURL(data.postLink)
 			.setImage(data.url)
-			.setFooter(`r/${data.subreddit} • ${data.ups} 👍`)
+			.setFooter({ text: `r/${data.subreddit} • ${data.ups} 👍` })
 			.setTimestamp();
 
 		await interaction.reply({ embeds: [embed], files: [image] });
