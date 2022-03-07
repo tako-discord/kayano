@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.3-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.2-alpha...v1.10.3-alpha) (2022-03-07)
+
+
+### Features
+
+* **events > ready:** add live updating for server count ([94ab51a](https://github.com/kayano-bot/kayano/commit/94ab51a144632783ed5b60dd736010422edef9ba))
+
 ### [1.10.2-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.1-alpha...v1.10.2-alpha) (2022-03-07)
 
 
