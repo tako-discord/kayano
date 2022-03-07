@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.2-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.1-alpha...v1.10.2-alpha) (2022-03-07)
+
+
+### Features
+
+* **commands > reactionrole:** reaction role menu does not reply to the interaction anymore ([c48d0f3](https://github.com/kayano-bot/kayano/commit/c48d0f359ff15b86c8174de7534fceb5748165fc))
+
+
+### Bug Fixes
+
+* **commands > meme:** implementing new change for .setFooter() ([5fe5dbd](https://github.com/kayano-bot/kayano/commit/5fe5dbd06f00a65561dbaa3fb198ded32a7fb90d))
+* **commands:** implemented new changes to the Embed System ([bfa3320](https://github.com/kayano-bot/kayano/commit/bfa33208b1915f48ba047281796db833ba40304f))
+
 ### [1.10.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.0-alpha.1...v1.10.1-alpha) (2022-02-19)
 
 
