@@ -21,13 +21,18 @@ module.exports = {
 			console.log('----------\nStarted top.gg autoposter');
 		}
 
-		const activities = [
-			`with version ${version}`,
-			`on ${client.guilds.cache.size} servers`,
-		];
+		let state = 0;
+		setInterval(() => {
+			const presences = [
+				{ type: 'PLAYING', message: `with version ${version}` },
+				{ type: 'WATCHING', message: `over ${client.guilds.cache.size} servers` },
+			];
 
-		let i = 0;
-		setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'PLAYING' }), 7500);
+			state = (state + 1) % presences.length;
+			const presence = presences[state];
+
+			client.user.setActivity(presence.message, { type: presence.type });
+		}, 7500);
 
 	},
 };
