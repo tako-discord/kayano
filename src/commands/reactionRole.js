@@ -110,7 +110,8 @@ module.exports = {
 				.setTitle(interaction.options.getString('title'))
 				.setDescription(interaction.options.getString('description'));
 
-			await interaction.reply({ embeds: [embed], files: [image], components: [row] });
+			await interaction.channel.send({ embeds: [embed], files: [image], components: [row] });
+			await interaction.reply({ content: 'Successfully created reaction role menu!', ephemeral: true });
 		}
 		else {
 			const msg = [
@@ -118,7 +119,8 @@ module.exports = {
 				interaction.options.getString('description'),
 			].join('\n');
 
-			await interaction.reply({ content: msg, components: [row] });
+			await interaction.reply({ content: 'Successfully created reaction role menu!', ephemeral: true });
+			await interaction.channel.send({ content: msg, components: [row] });
 		}
 
 	},
