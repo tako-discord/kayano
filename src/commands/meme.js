@@ -14,7 +14,7 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://funny.png')
-			.setAuthor(data.author, 'https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png', 'https://reddit.com/u/' + data.author)
+			.setAuthor({ name: data.author, iconURL: 'https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png', url: 'https://reddit.com/u/' + data.author })
 			.setTitle(data.title)
 			.setURL(data.postLink)
 			.setImage(data.url)

@@ -14,7 +14,7 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(defaultColor)
 			.setThumbnail('attachment://echo.png')
-			.setAuthor(interaction.user.tag, interaction.user.avatarURL({ dynamic: true }))
+			.setAuthor({ name: interaction.user.tag, iconURL: interaction.user.avatarURL({ dynamic: true }) })
 			.setTitle('Echo')
 			.setDescription(msg)
 			.setTimestamp();
