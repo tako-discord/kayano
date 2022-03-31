@@ -1,6 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageButton, MessageEmbed, MessageAttachment } = require('discord.js');
-const fetch = require('node-fetch');
 const { defaultColor } = require('../../config');
 require('dotenv').config();
 
@@ -11,12 +10,15 @@ const activities = {
 	'Fishington.io': '814288819477020702',
 	'Betrayal.io': '773336526917861400',
 	'Chess In The Park': '832012774040141894',
+	'Checkers in the Park': '832013003968348200',
 	'Doodle Crew': '878067389634314250',
+	'Sketch Heads': '902271654783242291',
 	'Letter Tile': '879863686565621790',
 	'Word Snacks': '879863976006127627',
 	'Sketchy Artist': '879864070101172255',
 	'Awkword': '879863881349087252',
 	'SpellCast': '852509694341283871',
+	'Ocho': '832025144389533716',
 	// Dev
 	'Old Youtube': '755600276941176913',
 	'Poker Night Staging': '763116274876022855',
@@ -70,12 +72,15 @@ module.exports = {
 				.addChoice('Fishington.io', 'Fishington.io')
 				.addChoice('Betrayal.io', 'Betrayal.io')
 				.addChoice('Chess In The Park', 'Chess In The Park')
+				.addChoice('Checkers in the Park', 'Checkers in the Park')
 				.addChoice('Doodle Crew', 'Doodle Crew')
+				.addChoice('Sketch Heads', 'Sketch Heads')
 				.addChoice('Letter Tile', 'Letter Tile')
 				.addChoice('Word Snacks', 'Word Snacks')
 				.addChoice('Sketchy Artist', 'Sketchy Artist')
 				.addChoice('Awkword', 'Awkword')
-				.addChoice('SpellCast', 'SpellCast')))
+				.addChoice('SpellCast', 'SpellCast')
+				.addChoice('Blazings 8', 'Ocho')))
 		.addSubcommand(subcommand => subcommand
 			.setName('development')
 			.setDescription('Start a dev activity (might be buggy)')
@@ -129,41 +134,36 @@ module.exports = {
 			return await interaction.reply({ content: 'You need to specifiy a valid voicechannel In order to create an activity', ephemeral: true });
 		}
 
-		await fetch(`https://discord.com/api/v9/channels/${channel.id}/invites`, {
-			method: 'POST',
-			body: JSON.stringify({
-				max_age: 86400,
-				max_uses: 0,
-				target_application_id: activities[activity],
-				target_type: 2,
-				temporary: false,
-				validate: null,
-			}),
-			headers: {
-				Authorization: `Bot ${process.env.TOKEN}`,
-				'Content-Type': 'application/json',
-			},
-		}).then(response => response.json())
-			.then(data => {
-				const image = new MessageAttachment('./assets/rocket.png', 'rocket.png');
-				const embed = new MessageEmbed()
-					.setColor(defaultColor)
-					.setThumbnail('attachment://rocket.png')
-					.setTitle('Created Activity')
-					.setDescription(`Successfully created an activity for <#${channel.id}>!`)
-					.addField('Activity', activity)
-					.addField('Please Note', 'The invites just work for Desktop as of right now :(');
+		console.log(activity);
+		console.log(activities[activity]);
 
-				const row = new MessageActionRow()
-					.addComponents(
-						new MessageButton()
-							.setURL(`https://discord.com/invite/${data.code}`)
-							.setLabel('Start/Join')
-							.setStyle('LINK'),
-					);
+		const invite = await channel.createInvite({
+			targetType: 2,
+			targetApplication: activities[activity],
+		});
 
-				return interaction.reply({ files: [image], embeds: [embed], components: [row], ephemeral: true });
-			});
+		if (invite) {
+			const image = new MessageAttachment('./assets/rocket.png', 'rocket.png');
+			const embed = new MessageEmbed()
+				.setColor(defaultColor)
+				.setThumbnail('attachment://rocket.png')
+				.setTitle('Created Activity')
+				.setDescription(`Successfully created an activity for <#${channel.id}>!`)
+				.addField('Activity', activity)
+				.addField('Please Note', 'The invites just work for Desktop as of right now :(');
 
+			const row = new MessageActionRow()
+				.addComponents(
+					new MessageButton()
+						.setURL(`https://discord.com/invite/${invite.code}`)
+						.setLabel('Start/Join')
+						.setStyle('LINK'),
+				);
+
+			return interaction.reply({ files: [image], embeds: [embed], components: [row], ephemeral: true });
+		}
+		else {
+			return await interaction.reply({ content: 'Failed to create activity', ephemeral: true });
+		}
 	},
 };
