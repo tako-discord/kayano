@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.3-alpha...v1.11.0-alpha) (2022-03-31)
+
+
+### Features
+
+* **commands > activity:** updated Activities ([f11d9ec](https://github.com/kayano-bot/kayano/commit/f11d9ec9f7507795483eb49b1a8a277f642be771))
+* **commands > stats:** added stats command ([490d0c0](https://github.com/kayano-bot/kayano/commit/490d0c0d0dc0614a257672ab31861f6806ba019a))
+* **devmessages:** added Developer messages ([bbc1117](https://github.com/kayano-bot/kayano/commit/bbc1117dd27e547d34d832fd97ac7865aaa128f4))
+* **sticky messages:** added sticky messages ([9b8914c](https://github.com/kayano-bot/kayano/commit/9b8914cdae6a307c09ff071b6ae59e18ea195b09)), closes [#74](https://github.com/kayano-bot/kayano/issues/74)
+
+
+### Bug Fixes
+
+* **commands > ban:** fixed ban command crashing the bot ([15055b9](https://github.com/kayano-bot/kayano/commit/15055b9269097c396477e2215b5c3005d8941ddf))
+
 ### [1.10.3-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.2-alpha...v1.10.3-alpha) (2022-03-07)
 
 
