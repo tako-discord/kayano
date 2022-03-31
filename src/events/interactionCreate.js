@@ -5,7 +5,6 @@ require('dotenv').config();
 
 async function errorFunction(interaction, error) {
 	console.error(error);
-	await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 
 	const image = new MessageAttachment('./assets/error.png', 'error.png');
 	const embed = new MessageEmbed()
@@ -34,8 +33,12 @@ module.exports = {
 				const { customId, values, member } = interaction;
 
 				if (customId == 'auto_roles') {
+					let hasPermission = false;
 					if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) {
 						return await interaction.reply({ content: noBotPermissionText, ephemeral: true });
+					}
+					else {
+						hasPermission = true;
 					}
 
 					const component = interaction.component;
@@ -53,7 +56,9 @@ module.exports = {
 							.catch(e => errorFunction(interaction, e));
 					}
 
-					interaction.reply({ content: 'Your roles got updated!', ephemeral: true });
+					if (hasPermission === true) {
+						interaction.reply({ content: 'Your roles got updated!', ephemeral: true });
+					}
 				}
 			}
 
