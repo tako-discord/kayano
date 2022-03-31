@@ -37,6 +37,8 @@ const flags = {
 // Ping messages used in the ping command
 const pingMessages = ['Is this really my ping? 😟', 'Is this okay? I can\'t look! 😣', 'I hope it isn\'t bad! 🥺'];
 
+const serverLink = 'https://discord.gg/ngkUdXQZ8P';
+
 module.exports = {
 	noPermissionText,
 	noBotPermissionText,
@@ -47,4 +49,5 @@ module.exports = {
 	voteLink,
 	flags,
 	pingMessages,
+	serverLink,
 };
