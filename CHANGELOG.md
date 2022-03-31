@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1-alpha](https://github.com/kayano-bot/kayano/compare/v1.11.0-alpha...v1.11.1-alpha) (2022-03-31)
+
+
+### Bug Fixes
+
+* **reactionroles:** fixed a bug that caused the bot to crash ([a00d1bf](https://github.com/kayano-bot/kayano/commit/a00d1bf4a51c52ee3887e4fad8a8c761933c4030))
+
 ## [1.11.0-alpha](https://github.com/kayano-bot/kayano/compare/v1.10.3-alpha...v1.11.0-alpha) (2022-03-31)
 
 
