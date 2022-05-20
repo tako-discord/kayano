@@ -1,3 +1,4 @@
+# Is currently being rewritten. Until it will be published Kayano is no longer receiving updates.
 # Kayano
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=for-the-badge)](#contributors)
